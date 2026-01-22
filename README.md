@@ -26,7 +26,7 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
 1. **Clone o repositório:**
    Abra seu terminal ou prompt de comando e execute:
    ```bash
-   git clone https://github.com/diegobernardessv/Curriculum-Vitae.git
+   git clone https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes.git
    ```
 
 2. **Acesse a pasta do projeto:**
