@@ -35,6 +35,8 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
 3. **Execute o arquivo:**
    Localize o arquivo `curriculum.html` e abra-o diretamente com seu navegador de preferência (clique duplo ou botão direito > Abrir com).
 
+4. **Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5:** Estruturação semântica do conteúdo.
