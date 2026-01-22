@@ -47,3 +47,5 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
 - **GitHub:** [diegobernardessv](https://github.com/diegobernardessv)
 - **GitLab:** [diegobernardessv](https://gitlab.com/diegobernardessv)
 - **Email:** diegobernardessv@gmail.com
+
+https://roadmap.sh/projects/single-page-cv
