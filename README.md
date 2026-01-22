@@ -1,4 +1,4 @@
-# Curriculum Vitae - Diego Bernardes Silva
+# Curriculum Vitae - Diego Bernardes
 
 Bem-vindo ao repositório do meu Currículo Interativo. Este projeto é uma apresentação web do meu perfil profissional, destacando minha experiência como Analista de Sistemas e Desenvolvedor FullStack.
 
