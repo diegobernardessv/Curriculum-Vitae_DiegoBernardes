@@ -49,3 +49,4 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
 - **Email:** diegobernardessv@gmail.com
 
 https://roadmap.sh/projects/single-page-cv
+https://roadmap.sh/projects/basic-html-website
