@@ -10,6 +10,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f9f9f9; /* Fundo cinza bem suave */
 }
 
 nav {
@@ -73,6 +74,38 @@ header h2 {
     font-size: 1.2rem;
     color: #666;             /* Cinza médio para o cargo */
     font-weight: normal;     /* Fonte mais leve */
+}
+
+/* Títulos das Seções */
+section h3 {
+    color:#2c3e50; /* Azul escuro */
+    border-bottom: 2px solid #2c3e50; /* Linha de destaque */
+    padding-bottom: 0.5rem; /* Espaço até a linha */
+    margin-top: 2rem; /* Espaço acima do texto */
+    margin-bottom: 1.5rem; /* Espaço abaixo do texto */
+}
+
+/* Cartões de Conteúdo (Experiência, Projetos, Formação) */
+article {
+    background: white; /* Fundo do cartão */
+    padding: 1.5rem; /* Espaçamento interno */
+    border: 1px solid #eee; /* Borda sutil */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra leve para destaque */
+    margin-bottom: 1.5rem; /* Separação entre cartões */
+}
+
+article h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+article p em, article time {
+    color: #666; /* Cinza para informações secundárias */
+    font-size: 0.95rem;
+    display: block; /* Garante que fique em linha própria caso necessário */
+    margin-bottom: 1rem;
 }
 
 
