@@ -7,7 +7,7 @@ Bem-vindo ao repositório do meu Currículo Interativo. Este projeto é uma apre
 Este é um projeto estático desenvolvido para demonstrar minhas qualificações, histórico profissional e portfólio de projetos de forma acessível e digital.
 
 O currículo abrange:
-- **Experiência Profissional:** Detalhes sobre minha atuação como Freelancer e no Grupo Simec.
+- **Experiência Profissional:** Detalhes sobre minha atuação como Freelancer, Arcelor Mittal e Grupo Simec.
 - **Skills:** HTML, CSS, JavaScript, Python, PostgreSQL, SAP Fiori, Power BI, entre outros.
 - **Projetos Recentes:** RomaneiosApp, NonConformity e Portfólio Pessoal.
 - **Formação e Cursos:** Minha trajetória acadêmica e certificações recentes.
