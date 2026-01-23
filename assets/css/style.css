@@ -1,0 +1,41 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+nav {
+    background-color: #333; /* Fundo cinza escuro */
+    padding: 1rem; /* Espaçamento interno (1rem = aprox. 16px) */
+}
+
+nav ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: center; /* Centraliza o menu na tela */
+    gap: 20px; /* Espaço entre os botões */
+}
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Texto branco */
+    font-weight: bold; /* Negrito */;
+    font-size: 1.1rem; /* Tamanho da fonte levemente maior */
+}
+
+nav a:hover {
+    color: #fd3a3a; /* Amarelo quando passa o mouse */
+    transition: 0.3s; /* Transição suave */
+}
+
+nav hr {
+    display: none; /* Esconde a linha horizontal dentro do menu */
+}
