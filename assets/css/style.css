@@ -108,5 +108,31 @@ article p em, article time {
     margin-bottom: 1rem;
 }
 
+    display: block; /* Garante que fique em linha própria caso necessário */
+    margin-bottom: 1rem;
+}
 
+/* Rodapé */
+footer {
+    background-color: #333;  /* Mesmo fundo do menu */
+    color: white;            /* Texto branco */
+    text-align: center;      /* Centralizado */
+    padding: 2rem 1rem;      /* Espaçamento interno */
+    margin-top: 3rem;        /* Afasta do conteúdo principal */
+}
+
+footer hr {
+    display: none; /* Esconde a linha */
+}
+
+/* Ícones via CSS (Pseudo-elementos) */
+article h4::before {
+    content: "💼";       /* Emoji de maleta */
+    margin-right: 0.5rem;
+}
+
+article time::before {
+    content: "📅";       /* Emoji de calendário */
+    margin-right: 0.3rem;
+}
 
