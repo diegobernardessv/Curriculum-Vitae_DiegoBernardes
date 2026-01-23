@@ -6,11 +6,11 @@ Bem-vindo ao repositório do meu Currículo Interativo. Este projeto é uma apre
 
 Este é um projeto estático desenvolvido para demonstrar minhas qualificações, histórico profissional e portfólio de projetos de forma acessível e digital.
 
-O currículo abrange:
-- **Experiência Profissional:** Detalhes sobre minha atuação como Freelancer, Arcelor Mittal e Grupo Simec.
-- **Skills:** HTML, CSS, JavaScript, Python, PostgreSQL, SAP Fiori, Power BI, entre outros.
-- **Projetos Recentes:** RomaneiosApp, NonConformity e Portfólio Pessoal.
-- **Formação e Cursos:** Minha trajetória acadêmica e certificações recentes.
+O site está organizado nas seguintes páginas:
+- **index.html:** Página inicial de boas-vindas.
+- **resume.html:** Currículo detalhado (Experiência, Skills, Formação).
+- **projects.html:** Galeria de projetos e portfólio.
+- **contact.html:** Informações de contato e redes sociais.
 
 ## 🚀 Como rodar o projeto
 
@@ -33,7 +33,7 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
    Navegue até o diretório criado pelo clone.
 
 3. **Execute o arquivo:**
-   Localize o arquivo `curriculum.html` e abra-o diretamente com seu navegador de preferência (clique duplo ou botão direito > Abrir com).
+   Localize o arquivo `index.html` e abra-o diretamente com seu navegador de preferência (clique duplo ou botão direito > Abrir com).
 
 4. **Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
 
