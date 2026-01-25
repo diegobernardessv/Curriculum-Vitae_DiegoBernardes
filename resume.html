@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
     <nav>
         <ul>
@@ -21,35 +23,43 @@
     <main>
         <section id="skills">
             <h3>Skills</h3>
-            <p>HTML, CSS, JavaScript, Python, PostgreSQL, SAP Fiori, Power BI, Microsoft Excel</p>
+            <article>
+                <p>HTML, CSS, JavaScript, Python, PostgreSQL, SAP Fiori, Power BI, Microsoft Excel</p>
+            </article>
         </section>
 
         <section id="education">
             <h3>Formação</h3>
             <article>
-                <h4>Análise e Desenvolvimento de Sistemas</h4>
+                <h4 class="formation">Análise e Desenvolvimento de Sistemas</h4>
                 <p>Estacio, Vitória - Espírito Santo</p>
-                <p><time datetime="2021-11">Nov 2021</time> - <time datetime="2023-11">Nov 2023</time></p>
+                <time class="datetime" datetime="2021-11">Nov 2021 - Nov 2023</time>
             </article>
         </section>
 
         <section id="experience">
             <h3>Experiência Profissional</h3>
             <article>
-                <h4>Desenvolvedor FullStack (Freelancer)</h4>
-                <p>Vitória - Espírito Santo | <em><time datetime="2024-01">Jan 2024</time> - Presente</em></p>
+                <h4 class="job">Desenvolvedor FullStack (Freelancer)</h4>
+                <p>Vitória - Espírito Santo</p>
+                <time class="datetime" datetime="2024-01">Jan 2024 - Presente</time>
                 <ul>
-                    <li><strong>Desenvolvimento de soluções web:</strong> criação e implantação de aplicações web responsivas e dinâmicas utilizando Python no back-end e HTML5/CSS/JavaScript no front-end.</li>
-                    <li><strong>Versionamento e deploy:</strong> gestão de código-fonte com Git/GitHub e realização de deploys em ambientes de nuvem.</li>
+                    <li><strong>Desenvolvimento de soluções web:</strong> criação e implantação de aplicações web
+                        responsivas e dinâmicas utilizando Python no back-end e HTML5/CSS/JavaScript no front-end.</li>
+                    <li><strong>Versionamento e deploy:</strong> gestão de código-fonte com Git/GitHub e realização de
+                        deploys em ambientes de nuvem.</li>
                 </ul>
             </article>
 
             <article>
-                <h4>Técnico de Suprimentos - Grupo Simec</h4>
-                <p>Cariacica - Espírito Santo | <em><time datetime="2012-01">Jan 2012</time> - Presente</em></p>
+                <h4 class="job">Técnico de Suprimentos - Grupo Simec</h4>
+                <p>Cariacica - Espírito Santo</p>
+                <time class="datetime" datetime="2012-01">Jan 2012 - Presente</time>
                 <ul>
-                    <li><strong>Interface Técnica e Key User:</strong> Atuação como ponto focal entre o almoxarifado e a TI no TOTVS Protheus.</li>
-                    <li><strong>Gestão de Dados e KPIs:</strong> Compilação de dados mensais e dashboards em Power BI.</li>
+                    <li><strong>Interface Técnica e Key User:</strong> Atuação como ponto focal entre o almoxarifado e a
+                        TI no TOTVS Protheus.</li>
+                    <li><strong>Gestão de Dados e KPIs:</strong> Compilação de dados mensais e dashboards em Power BI.
+                    </li>
                     <li><strong>Capacitação Corporativa:</strong> Treinamento técnico do ERP TOTVS Protheus.</li>
                 </ul>
             </article>
@@ -57,22 +67,31 @@
 
         <section id="courses">
             <h3>Cursos</h3>
-            <ul>
-                <li><strong>Microsoft Excel + Power BI - Formação Especialista</strong>, Udemy (Fev 2024 - Mar 2024)</li>
-                <li><strong>FullStack Web Developer using Flask, Python, HTML, CSS and MongoDB</strong>, Udemy (Mai 2024 - Jul 2024)</li>
-                <li><strong>Power BI Avançado</strong>, Udemy (Jan 2025 - Fev 2025)</li>
-                <li><strong>TOTVS Protheus - Módulo Estoque / Custos</strong>, Udemy (Mai 2025 - Jul 2025)</li>
-                <li><strong>SAP Fiori FullStack Trainee</strong>, Megawork Consulting (Nov 2025 - Dez 2025)</li>
-            </ul>
+            <article>
+                <ul>
+                    <li><strong>Microsoft Excel + Power BI - Formação Especialista, <em>Udemy</em></strong></li>
+                    <time class="datetime">Fev 2024 - Mar 2024</time>
+                    <li><strong>FullStack Web Developer using Flask, Python, HTML, CSS and MongoDB, <em>Udemy</em></strong></li>
+                    <time class="datetime">Mai 2024 - Jul 2024</time>
+                    <li><strong>Power BI Avançado, <em>Udemy</em></strong></li>
+                    <time class="datetime">Jan 2025 - Fev 2025</time>
+                    <li><strong>TOTVS Protheus - Módulo Estoque / Custos, <em>Udemy</em></strong></li>
+                    <time class="datetime">Mai 2025 - Jul 2025</time>
+                    <li><strong>SAP Fiori FullStack Trainee, <em>Megawork Consulting</em></strong></li>
+                    <time class="datetime">Nov 2025 - Dez 2025</time>
+                </ul>
+            </article>
         </section>
 
         <section id="languages">
             <h3>Idiomas</h3>
-            <ul>
-                <li>Inglês - Intermediário</li>
-                <li>Espanhol - Básico</li>
-                <li>Português - Nativo</li>
-            </ul>
+            <article>
+                <ul>
+                    <li>Inglês - Intermediário</li>
+                    <li>Espanhol - Básico</li>
+                    <li>Português - Nativo</li>
+                </ul>
+            </article>
         </section>
     </main>
 
@@ -81,4 +100,5 @@
         <p style="text-align: center;">&copy; 2025 Diego Bernardes Silva.</p>
     </footer>
 </body>
+
 </html>

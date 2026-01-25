@@ -7,9 +7,9 @@
 
 /* Estilos Gerais */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #461616;
     background-color: #f9f9f9; /* Fundo cinza bem suave */
 }
 
@@ -46,6 +46,10 @@ main {
     max-width: 800px; /* Largura ideal para leitura */
     margin: 2rem auto; /* Centraliza o bloco na página */
     padding: 0 1rem; /* Margem de segurança para celulares */
+}
+
+main ul {
+    list-style: none; /* Remove as bolinhas da lista */
 }
 
 /* Cabeçalho (Home) */
@@ -108,10 +112,6 @@ article p em, article time {
     margin-bottom: 1rem;
 }
 
-    display: block; /* Garante que fique em linha própria caso necessário */
-    margin-bottom: 1rem;
-}
-
 /* Rodapé */
 footer {
     background-color: #333;  /* Mesmo fundo do menu */
@@ -126,7 +126,12 @@ footer hr {
 }
 
 /* Ícones via CSS (Pseudo-elementos) */
-article h4::before {
+.formation::before {
+    content: "🎓";       /* Emoji de formação */
+    margin-right: 0.5rem;
+}
+
+.job::before {
     content: "💼";       /* Emoji de maleta */
     margin-right: 0.5rem;
 }
@@ -136,3 +141,21 @@ article time::before {
     margin-right: 0.3rem;
 }
 
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;    /* Centraliza */
+        gap: 15px;              /* Ajusta o espaço */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Diminui um pouco o nome para caber na tela */
+    }
+}
+
+.datetime {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+}
