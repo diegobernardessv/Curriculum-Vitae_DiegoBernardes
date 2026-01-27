@@ -112,19 +112,6 @@ article p em, article time {
     margin-bottom: 1rem;
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;  /* Mesmo fundo do menu */
-    color: white;            /* Texto branco */
-    text-align: center;      /* Centralizado */
-    padding: 2rem 1rem;      /* Espaçamento interno */
-    margin-top: 3rem;        /* Afasta do conteúdo principal */
-}
-
-footer hr {
-    display: none; /* Esconde a linha */
-}
-
 /* Ícones via CSS (Pseudo-elementos) */
 .formation::before {
     content: "🎓";       /* Emoji de formação */
@@ -158,4 +145,84 @@ article time::before {
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
+}
+
+/* === Footer Styles === */
+
+.footer {
+    background-color: black;
+    background-image: linear-gradient(135deg, #000000, #1a1a1a);
+    height: auto;
+    padding:0; 
+    margin-top: 3px;
+    color: white;
+    font-size: 13px;
+    border-top: 5px solid #8b0000;
+}
+
+
+.footer__content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+
+}
+
+.left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer__text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer__item {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer__item:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer__version {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.logo {
+    height: auto;
+    max-height: 150px;
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.5); /* aumenta o tamanho da logo ao passar o mouse */
+    filter: brightness(1.1); /* opcional: dá um leve brilho */
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
 }
