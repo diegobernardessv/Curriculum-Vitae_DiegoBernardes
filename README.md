@@ -76,6 +76,14 @@ Este projeto está pronto para ser implantado na nuvem usando a plataforma Rende
 
 5.  **Clique em "Create Web Service":** O Render irá construir e implantar sua aplicação. Após alguns minutos, seu site estará disponível em uma URL como `https://nome-da-sua-app.onrender.com`.
 
+### Adicionando um Domínio Personalizado
+
+1.  No seu serviço web no Render, vá para a aba **Settings**.
+2.  Role para baixo até a seção **Custom Domains** e adicione seu domínio (ex: `www.seusite.com`).
+3.  O Render fornecerá um valor para um registro `CNAME`. Copie esse valor.
+4.  No painel de controle do seu provedor de domínio (Cloudflare, etc.), crie um registro `CNAME` apontando para o valor fornecido pelo Render.
+5.  Aguarde a verificação e a propagação do DNS. O Render cuidará automaticamente do certificado SSL.
+
 **Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
 
 ## 🛠️ Tecnologias Utilizadas
