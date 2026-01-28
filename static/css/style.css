@@ -1,18 +1,41 @@
-/* Reset Básico */
+/* ============================
+    1. RESET & ESTILOS GERAIS
+   ============================ */
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Espaçamento entre os elementos */
-.container {
-    max-width: 1600px;
-    text-align: center;
-    border-radius: 8px;
+/* Estilos Gerais do Body */
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    /* Corrigido: vírgula separando as cores do gradiente */
+    background-image: linear-gradient(135deg, black, #1a1a1a, black);
+    color: #e0e0e0;
 }
 
-/* === Navbar Customizada === */
+/* ============================
+2. LAYOUT & CONTAINERS
+   ============================ */
+
+/* Containers centrais */
+.container,
+main.container {
+    max-width: 1600px;
+    text-align: center;
+    background-color: #101010;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================
+3. NAVBAR
+   ============================ */
 .custom-navbar {
     background-color: black;
     border-bottom: 2px solid #8b0000;
@@ -20,7 +43,6 @@
     z-index: 1030;
 }
 
-/* Transições suaves nos itens */
 .navbar .nav-link {
     color: white;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -58,91 +80,47 @@
     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
 }
 
-/* Estilos Gerais */
-body {
-    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;
-    background-image: linear-gradient(135deg, black#101010, #1a1a1a, black);
-    color: #e0e0e0;/* Fundo cinza bem suave */
+/* ============================
+4. HEADER (Página Inicial)
+   ============================ */
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
-/* Containers centrais */
-.container,
-main.container {
-    background-color: #101010;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+header h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: normal;
 }
 
+/* ============================
+5. CONTEÚDO PRINCIPAL & CARDS
+   ============================ */
+/* Títulos das Seções */
+section h3 {
+    color: #ffffff;
+    border-bottom: 2px solid #5e5e5e;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo base para listas no conteúdo principal */
 main ul {
     list-style: none;
     /* Remove as bolinhas da lista */
 }
 
-/* Cabeçalho (Home) */
-header {
-    text-align: center;
-    /* Centraliza foto e texto */
-    background-color: #f4f4f4;
-    /* Fundo cinza claro */
-    padding: 3rem 1rem;
-    /* Espaçamento generoso */
-    border-bottom: 1px solid #ddd;
-    /* Linha sutil abaixo */
-}
-
-header img {
-    border-radius: 50%;
-    /* Faz a imagem ficar redonda */
-    object-fit: cover;
-    /* Garante que a foto não distorça */
-    border: 5px solid white;
-    /* Borda branca grossa */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar */
-    margin-bottom: 1rem;
-    /* Espaço entre a foto e o nome */
-}
-
-header h1 {
-    font-size: 2.5rem;
-    /* Nome grande */
-    color: #2c3e50;
-    /* Azul escuro profissional */
-    margin-bottom: 0.5rem;
-    /* Espaço abaixo do nome */
-}
-
-header h2 {
-    font-size: 1.2rem;
-    color: #666;
-    /* Cinza médio para o cargo */
-    font-weight: normal;
-    /* Fonte mais leve */
-}
-
-/* Títulos das Seções */
-section h3 {
-    color: #2c3e50;
-    /* Azul escuro */
-    border-bottom: 2px solid #2c3e50;
-    /* Linha de destaque */
-    padding-bottom: 0.5rem;
-    /* Espaço até a linha */
-    margin-top: 2rem;
-    /* Espaço acima do texto */
-    margin-bottom: 1.5rem;
-    /* Espaço abaixo do texto */
-}
-
-/* Cartões de Conteúdo (Experiência, Projetos, Formação) */
-article {
+/* Cartões de Conteúdo (Article, Address) */
+article,
+address {
     background: white;
     /* Fundo do cartão */
     padding: 1.5rem;
     /* Espaçamento interno */
-    border: 1px solid #eee;
+    border: 1px solid #8b0000;
     /* Borda sutil */
     border-radius: 8px;
     /* Borda arredondada */
@@ -152,20 +130,36 @@ article {
     /* Separação entre cartões */
 }
 
+/* Elementos dentro dos cartões */
 article h4 {
-    color: #333;
+    color: #000000;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-article p em,
 article time {
-    color: #666;
-    /* Cinza para informações secundárias */
+    color: #700505;
     font-size: 0.95rem;
     display: block;
-    /* Garante que fique em linha própria caso necessário */
     margin-bottom: 1rem;
+}
+
+time.datetime {
+    font-weight: bold;
+}
+
+article p,
+address p {
+    color: #000000;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+article ul li {
+    color: #000000;
+    font-size: 0.8rem;
+    display: block;
 }
 
 /* Ícones via CSS (Pseudo-elementos) */
@@ -187,31 +181,9 @@ article time::before {
     margin-right: 0.3rem;
 }
 
-/* Responsividade para Celulares */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        /* Empilha os itens verticalmente */
-        align-items: center;
-        /* Centraliza */
-        gap: 15px;
-        /* Ajusta o espaço */
-    }
-
-    header h1 {
-        font-size: 2rem;
-        /* Diminui um pouco o nome para caber na tela */
-    }
-}
-
-.datetime {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-/* === Footer Styles === */
-
+/* ============================
+6. FOOTER
+   ============================ */
 .footer {
     background-color: black;
     background-image: linear-gradient(135deg, #000000, #1a1a1a);
@@ -223,7 +195,6 @@ article time::before {
     border-top: 5px solid #8b0000;
 }
 
-
 .footer__content {
     max-width: 1600px;
     margin: 0 auto;
@@ -232,7 +203,6 @@ article time::before {
     align-items: center;
     padding: 10px 40px;
     flex-wrap: wrap;
-
 }
 
 .left {
@@ -290,4 +260,23 @@ article time::before {
     filter: brightness(1.1);
     /* opcional: dá um leve brilho */
     filter: drop-shadow(16px 16px 20px red) invert(75%);
+}
+
+/* ============================
+7. RESPONSIVIDADE
+   ============================ */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        /* Empilha os itens verticalmente */
+        align-items: center;
+        /* Centraliza */
+        gap: 15px;
+        /* Ajusta o espaço */
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* Diminui um pouco o nome para caber na tela */
+    }
 }
