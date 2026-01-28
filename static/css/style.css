@@ -280,3 +280,7 @@ article time::before {
         /* Diminui um pouco o nome para caber na tela */
     }
 }
+
+.profile_picture {
+    border: solid 1px black;
+}
