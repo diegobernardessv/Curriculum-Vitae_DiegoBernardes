@@ -1,7 +1,12 @@
 from flask import Flask, render_template
+from whitenoise import WhiteNoise
 
 # Cria uma instância da aplicação Flask
 app = Flask(__name__)
+# Configura o WhiteNoise para servir arquivos estáticos
+# root='static/' indica a pasta física onde os arquivos estão
+# prefix='static/' indica a URL que o navegador usará (ex: /static/css/style.css)
+app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/', prefix='static/')
 
 # Define a rota para a página inicial (home)
 @app.route('/')
