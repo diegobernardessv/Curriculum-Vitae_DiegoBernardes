@@ -1,0 +1,293 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Espaçamento entre os elementos */
+.container {
+    max-width: 1600px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* === Navbar Customizada === */
+.custom-navbar {
+    background-color: black;
+    border-bottom: 2px solid #8b0000;
+    transition: box-shadow 0.3s ease;
+    z-index: 1030;
+}
+
+/* Transições suaves nos itens */
+.navbar .nav-link {
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-item .nav-link[aria-current="page"] {
+    color: #ff4d4d !important;
+    border-bottom: 2px solid #ff4d4d;
+    padding-bottom: 2px;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 30px;
+}
+
+.navbar .navbar-brand:hover {
+    transform: scale(1.05);
+    color: #ff4d4d;
+}
+
+/* Sombra quando a navbar rola */
+.shadow-on-scroll {
+    box-shadow: none;
+}
+
+.scrolled .shadow-on-scroll {
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    background-image: linear-gradient(135deg, black#101010, #1a1a1a, black);
+    color: #e0e0e0;/* Fundo cinza bem suave */
+}
+
+/* Containers centrais */
+.container,
+main.container {
+    background-color: #101010;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main ul {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+}
+
+/* Cabeçalho (Home) */
+header {
+    text-align: center;
+    /* Centraliza foto e texto */
+    background-color: #f4f4f4;
+    /* Fundo cinza claro */
+    padding: 3rem 1rem;
+    /* Espaçamento generoso */
+    border-bottom: 1px solid #ddd;
+    /* Linha sutil abaixo */
+}
+
+header img {
+    border-radius: 50%;
+    /* Faz a imagem ficar redonda */
+    object-fit: cover;
+    /* Garante que a foto não distorça */
+    border: 5px solid white;
+    /* Borda branca grossa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar */
+    margin-bottom: 1rem;
+    /* Espaço entre a foto e o nome */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    /* Nome grande */
+    color: #2c3e50;
+    /* Azul escuro profissional */
+    margin-bottom: 0.5rem;
+    /* Espaço abaixo do nome */
+}
+
+header h2 {
+    font-size: 1.2rem;
+    color: #666;
+    /* Cinza médio para o cargo */
+    font-weight: normal;
+    /* Fonte mais leve */
+}
+
+/* Títulos das Seções */
+section h3 {
+    color: #2c3e50;
+    /* Azul escuro */
+    border-bottom: 2px solid #2c3e50;
+    /* Linha de destaque */
+    padding-bottom: 0.5rem;
+    /* Espaço até a linha */
+    margin-top: 2rem;
+    /* Espaço acima do texto */
+    margin-bottom: 1.5rem;
+    /* Espaço abaixo do texto */
+}
+
+/* Cartões de Conteúdo (Experiência, Projetos, Formação) */
+article {
+    background: white;
+    /* Fundo do cartão */
+    padding: 1.5rem;
+    /* Espaçamento interno */
+    border: 1px solid #eee;
+    /* Borda sutil */
+    border-radius: 8px;
+    /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Sombra leve para destaque */
+    margin-bottom: 1.5rem;
+    /* Separação entre cartões */
+}
+
+article h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+article p em,
+article time {
+    color: #666;
+    /* Cinza para informações secundárias */
+    font-size: 0.95rem;
+    display: block;
+    /* Garante que fique em linha própria caso necessário */
+    margin-bottom: 1rem;
+}
+
+/* Ícones via CSS (Pseudo-elementos) */
+.formation::before {
+    content: "🎓";
+    /* Emoji de formação */
+    margin-right: 0.5rem;
+}
+
+.job::before {
+    content: "💼";
+    /* Emoji de maleta */
+    margin-right: 0.5rem;
+}
+
+article time::before {
+    content: "📅";
+    /* Emoji de calendário */
+    margin-right: 0.3rem;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        /* Empilha os itens verticalmente */
+        align-items: center;
+        /* Centraliza */
+        gap: 15px;
+        /* Ajusta o espaço */
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* Diminui um pouco o nome para caber na tela */
+    }
+}
+
+.datetime {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* === Footer Styles === */
+
+.footer {
+    background-color: black;
+    background-image: linear-gradient(135deg, #000000, #1a1a1a);
+    height: auto;
+    padding: 0;
+    margin-top: 3px;
+    color: white;
+    font-size: 13px;
+    border-top: 5px solid #8b0000;
+}
+
+
+.footer__content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+
+}
+
+.left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer__text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer__item {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer__item:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer__version {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.logo {
+    height: auto;
+    max-height: 150px;
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.5);
+    /* aumenta o tamanho da logo ao passar o mouse */
+    filter: brightness(1.1);
+    /* opcional: dá um leve brilho */
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
+}

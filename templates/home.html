@@ -1,18 +1,14 @@
-<!doctype html>
-<html lang="pt-BR">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currículo | Diego Bernardes Silva</title>
+{% block title %}Início | Diego Bernardes Silva{% endblock %}
 
+{% block meta_tags %}
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="Currículo de Diego Bernardes Silva - Analista de Sistemas e Desenvolvedor FullStack. Especialista em Python, JavaScript e Power BI.">
     <meta name="keywords"
         content="Diego Bernardes, Desenvolvedor FullStack, Python, JavaScript, Power BI, Currículo, Analista de Sistemas, Microsoft Excel">
     <meta name="author" content="Diego Bernardes Silva">
-
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes">
@@ -20,27 +16,9 @@
     <meta property="og:description"
         content="Analista de Sistemas e Desenvolvedor FullStack. Confira meus projetos e experiências.">
     <meta property="og:image" content="https://github.com/diegobernardessv.png"> <!-- Foto do GitHub -->
+{% endblock %}
 
-    <!-- Favicon (Ícone da aba) -->
-    <!-- Coloque um arquivo favicon.ico na raiz ou use um link png -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Arquivo de Estilos CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-    <!-- Menu de Navegação -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="resume.html">Currículo</a></li>
-            <li><a href="projects.html">Projetos</a></li>
-            <li><a href="contact.html">Contato</a></li>
-        </ul>
-        <hr>
-    </nav>
-
+{% block content %}
     <!-- Cabeçalho Principal: Identificação e Contato -->
     <header>
         <!-- Foto de Perfil Visível -->
@@ -49,32 +27,11 @@
         <h2>Analista de Sistemas | Desenvolvedor FullStack</h2>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
+    <main class="container">
         <section>
             <p>Bem-vindo ao meu portfólio online. Aqui você encontrará detalhes sobre minha trajetória profissional,
                 projetos desenvolvidos e habilidades técnicas.</p>
             <p>Navegue pelo menu acima para saber mais.</p>
         </section>
     </main>
-
-    <!-- Rodapé -->
-    <footer class="footer bg-black">
-        <div class="footer__content">
-            <section class="left">
-                <img src="#" alt="Logo">
-            </section>
-            <section class="right">
-                <div class="footer__info">
-                    <p class="footer__text">
-                        <a href="https://www.linkedin.com/in/diegobernardessv" class="footer__item">&copy; 2026 DB
-                            Solutions' - Todos os direitos reservados.></a>
-                    </p>
-                    <p class="footer__version">Version 1.0.0</p>
-                </div>
-            </section>
-        </div>
-    </footer>
-</body>
-
-</html>
+{% endblock %}

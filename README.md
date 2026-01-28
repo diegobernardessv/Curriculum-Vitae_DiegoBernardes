@@ -1,25 +1,25 @@
 # Curriculum Vitae - Diego Bernardes
 
-Bem-vindo ao repositório do meu Currículo Interativo. Este projeto é uma apresentação web do meu perfil profissional, destacando minha experiência como Analista de Sistemas e Desenvolvedor FullStack.
+Bem-vindo ao repositório do meu Portfólio Interativo. Este projeto é uma aplicação web dinâmica para apresentar meu perfil profissional, destacando minha experiência como Analista de Sistemas e Desenvolvedor FullStack.
 
 ## 📋 Sobre o Projeto
 
-Este é um projeto estático desenvolvido para demonstrar minhas qualificações, histórico profissional e portfólio de projetos de forma acessível e digital.
+Este projeto utiliza o microframework Flask (Python) para servir um site dinâmico com um sistema de templates, permitindo fácil manutenção e escalabilidade.
 
 O site está organizado nas seguintes páginas:
-- **index.html:** Página inicial de boas-vindas.
-- **resume.html:** Currículo detalhado (Experiência, Skills, Formação).
-- **projects.html:** Galeria de projetos e portfólio.
-- **contact.html:** Informações de contato e redes sociais.
+- **Início:** Página inicial de boas-vindas.
+- **Currículo:** Currículo detalhado (Experiência, Skills, Formação).
+- **Projetos:** Galeria de projetos e portfólio.
+- **Contato:** Informações de contato e redes sociais.
 
-## 🚀 Como rodar o projeto
+## 🚀 Como Rodar o Projeto (Localmente)
 
-Para visualizar este currículo em sua máquina local, siga as instruções abaixo. Não é necessário instalar dependências de backend ou servidores complexos, pois o projeto é baseado em tecnologias web nativas.
+Para executar este projeto em sua máquina local, você precisará do Python e do Flask.
 
 ### Pré-requisitos
 
-- Git (para clonar o repositório).
-- Um navegador web moderno (Google Chrome, Firefox, Edge, etc.).
+- [Python 3.8+](https://www.python.org/downloads/)
+- Git (para clonar o repositório)
 
 ### Passo a passo
 
@@ -27,19 +27,64 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
    Abra seu terminal ou prompt de comando e execute:
    ```bash
    git clone https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes.git
+   cd Curriculum-Vitae_DiegoBernardes
    ```
 
-2. **Acesse a pasta do projeto:**
-   Navegue até o diretório criado pelo clone.
+2. **Crie e ative um ambiente virtual (Recomendado):**
+   ```bash
+   # Para Windows
+   python -m venv venv
+   .\venv\Scripts\activate
 
-3. **Execute o arquivo:**
-   Localize o arquivo `index.html` e abra-o diretamente com seu navegador de preferência (clique duplo ou botão direito > Abrir com).
+   # Para macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-4. **Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
+3. **Instale as dependências:**
+   Com o ambiente virtual ativado, instale os pacotes necessários:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Execute a aplicação:**
+   ```bash
+   flask run
+   ```
+   Ou, alternativamente:
+   ```bash
+   python app.py
+   ```
+
+5. **Acesse no navegador:**
+   Abra seu navegador e acesse http://127.0.0.1:5000.
+
+## ☁️ Deploy na Nuvem com Render
+
+Este projeto está pronto para ser implantado na nuvem usando a plataforma Render.
+
+1.  **Crie uma conta no Render:** Acesse render.com e crie uma conta (você pode usar sua conta do GitHub).
+
+2.  **Crie um "New Web Service":** No dashboard, clique em **New +** e selecione **Web Service**.
+
+3.  **Conecte seu repositório:** Conecte sua conta do GitHub e selecione o repositório `Curriculum-Vitae_DiegoBernardes`.
+
+4.  **Configure o serviço:**
+    - **Name:** Escolha um nome para sua aplicação (ex: `portfolio-diego`).
+    - **Build Command:** `pip install -r requirements.txt`
+    - **Start Command:** `gunicorn app:app`
+
+5.  **Clique em "Create Web Service":** O Render irá construir e implantar sua aplicação. Após alguns minutos, seu site estará disponível em uma URL como `https://nome-da-sua-app.onrender.com`.
+
+**Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5:** Estruturação semântica do conteúdo.
+- **CSS3:** Estilização e design responsivo.
+- **Bootstrap:** Framework de frontend para componentes de UI.
+- **Python:** Linguagem de programação do backend.
+- **Flask:** Microframework web para o servidor.
 
 ## 📬 Contato
 
@@ -47,6 +92,3 @@ Para visualizar este currículo em sua máquina local, siga as instruções abai
 - **GitHub:** [diegobernardessv](https://github.com/diegobernardessv)
 - **GitLab:** [diegobernardessv](https://gitlab.com/diegobernardessv)
 - **Email:** diegobernardessv@gmail.com
-
-https://roadmap.sh/projects/single-page-cv
-https://roadmap.sh/projects/basic-html-website

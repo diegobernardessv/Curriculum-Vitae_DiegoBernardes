@@ -1,26 +1,9 @@
-<!doctype html>
-<html lang="pt-BR">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currículo | Diego Bernardes Silva</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+{% block title %}Currículo | Diego Bernardes Silva{% endblock %}
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="resume.html">Currículo</a></li>
-            <li><a href="projects.html">Projetos</a></li>
-            <li><a href="contact.html">Contato</a></li>
-        </ul>
-        <hr>
-    </nav>
-
-    <main>
+{% block content %}
+    <main class="container">
         <section id="skills">
             <h3>Skills</h3>
             <article>
@@ -95,24 +78,4 @@
             </article>
         </section>
     </main>
-
-    <!-- Rodapé -->
-    <footer class="footer bg-black">
-        <div class="footer__content">
-            <section class="left">
-                <img src="#" alt="Logo">
-            </section>
-            <section class="right">
-                <div class="footer__info">
-                    <p class="footer__text">
-                        <a href="https://www.linkedin.com/in/diegobernardessv" class="footer__item">&copy; 2026 DB
-                            Solutions' - Todos os direitos reservados.></a>
-                    </p>
-                    <p class="footer__version">Version 1.0.0</p>
-                </div>
-            </section>
-        </div>
-    </footer>
-</body>
-
-</html>
+{% endblock %}
