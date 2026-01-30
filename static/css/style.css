@@ -809,8 +809,14 @@ article time::before {
     font-weight: 600;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
 .project-link {
-    margin-top: auto;
     color: var(--color-accent);
     font-weight: 600;
     text-decoration: none;
@@ -821,6 +827,202 @@ article time::before {
 
 .project-link:hover {
     color: var(--color-accent-light);
+}
+
+.project-link--repo {
+    color: #333333;
+}
+
+.project-link--repo:hover {
+    color: var(--color-accent);
+}
+
+/* ============================
+   6.3 CONTATO
+   ============================ */
+.contact-page {
+    padding: 2rem 1.5rem 3rem;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-intro {
+    color: var(--color-muted);
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+}
+
+.contact-card h4 {
+    margin-bottom: 0.4rem;
+    color: #000000;
+}
+
+.contact-card p,
+.contact-card a {
+    color: #333333;
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: var(--color-accent-light);
+}
+
+.contact-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(139, 0, 0, 0.15);
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    color: var(--color-accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.contact-social {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    text-align: left;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.8rem;
+}
+
+.social-links a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(139, 0, 0, 0.15);
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-light);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background: var(--color-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.contact-form-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    text-align: left;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.form-field label {
+    font-weight: 600;
+    color: #000000;
+}
+
+.form-field input,
+.form-field textarea {
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.15);
+}
+
+.field-error {
+    display: none;
+    color: #b00020;
+    font-size: 0.8rem;
+}
+
+.form-field.has-error .field-error {
+    display: block;
+}
+
+.form-field.has-error input,
+.form-field.has-error textarea {
+    border-color: #b00020;
+}
+
+.btn-contact-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.35);
+}
+
+.contact-result {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+.contact-result.is-error {
+    color: #b00020;
 }
 
 /* ============================
@@ -1060,6 +1262,18 @@ article time::before {
 
     .project-body {
         padding: 1.25rem;
+    }
+
+    .contact-page {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .contact-grid {
+        gap: 1.5rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
     }
 }
 

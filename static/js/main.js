@@ -1,6 +1,6 @@
 /**
  * main.js - Scripts principais do Portfólio Diego Bernardes Silva
- * Versão: 1.1.0
+ * Versao: 1.2.0
  */
 
 // ============================
@@ -145,7 +145,7 @@ function setActiveNavLink() {
 }
 
 // ============================
-// 5. ANIMAÇÕES AO SCROLL
+// 5. ANIMACOES AO SCROLL
 // ============================
 
 function initScrollAnimations() {
@@ -172,7 +172,67 @@ function initScrollAnimations() {
 }
 
 // ============================
-// 6. INICIALIZAÇÃO
+// 6. FORMULARIO DE CONTATO
+// ============================
+
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const fields = {
+        name: document.getElementById('contact-name'),
+        email: document.getElementById('contact-email'),
+        subject: document.getElementById('contact-subject'),
+        message: document.getElementById('contact-message')
+    };
+
+    const result = document.getElementById('contact-result');
+
+    const validateField = (field, validator) => {
+        const wrapper = field.closest('.form-field');
+        if (!wrapper) return true;
+        const isValid = validator(field.value);
+        wrapper.classList.toggle('has-error', !isValid);
+        return isValid;
+    };
+
+    const isEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nameOk = validateField(fields.name, (value) => value.trim().length > 1);
+        const emailOk = validateField(fields.email, isEmail);
+        const subjectOk = validateField(fields.subject, (value) => value.trim().length > 2);
+        const messageOk = validateField(fields.message, (value) => value.trim().length > 5);
+
+        if (!nameOk || !emailOk || !subjectOk || !messageOk) {
+            if (result) {
+                result.textContent = 'Por favor, revise os campos destacados.';
+                result.classList.add('is-error');
+            }
+            return;
+        }
+
+        const subject = encodeURIComponent(fields.subject.value.trim());
+        const body = encodeURIComponent(
+            `Nome: ${fields.name.value.trim()}\n` +
+            `Email: ${fields.email.value.trim()}\n\n` +
+            `${fields.message.value.trim()}`
+        );
+
+        if (result) {
+            result.textContent = 'Abrindo seu cliente de email...';
+            result.classList.remove('is-error');
+        }
+
+        window.location.href = `mailto:diegobernardessv@gmail.com?subject=${subject}&body=${body}`;
+        form.reset();
+    });
+}
+
+// ============================
+// 7. INICIALIZACAO
 // ============================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -200,6 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa animações ao scroll
     initScrollAnimations();
+
+    // Inicializa formulario de contato
+    initContactForm();
 
     console.log('🚀 Portfólio Diego Bernardes - Scripts carregados!');
 });

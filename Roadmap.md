@@ -56,21 +56,21 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 5: Página Projetos
+### Fase 5: Página Projetos 🚧
 - [ ] Cards de projeto com imagens/screenshots
-- [ ] Hover effects nos cards (zoom, overlay)
-- [ ] Tags de tecnologias utilizadas
-- [ ] Links para demo e repositório
+- [x] Hover effects nos cards (zoom, overlay)
+- [x] Tags de tecnologias utilizadas
+- [x] Links para demo e repositório
 - [ ] Filtro por categoria/tecnologia (opcional)
 
 ---
 
-### Fase 6: Página Contato
-- [ ] Formulário de contato funcional (EmailJS ou similar)
-- [ ] Validação de formulário no frontend
-- [ ] Cards de informações de contato estilizados
+### Fase 6: Página Contato 🚧
+- [x] Formulário de contato funcional (mailto)
+- [x] Validação de formulário no frontend
+- [x] Cards de informações de contato estilizados
 - [ ] Mapa interativo (opcional)
-- [ ] Ícones de redes sociais maiores e mais visíveis
+- [x] Ícones de redes sociais maiores e mais visíveis
 
 ---
 
@@ -113,6 +113,16 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Cursos em cards responsivos
 - Idiomas com badges e ícones
 - Botão de download do currículo em PDF
+
+### v1.3.0 - 30/01/2026
+- Página Projetos com cards modernos
+- Tags de tecnologia e status por projeto
+- Links para demo e repositórios
+
+### v1.4.0 - 30/01/2026
+- Página Contato reformulada com layout em grade
+- Cards de contato com ícones e links diretos
+- Formulário com validação e envio via mailto
 
 ---
 

@@ -3,23 +3,96 @@
 {% block title %}Contato | Diego Bernardes Silva{% endblock %}
 
 {% block content %}
-    <main class="container">
-        <section id="contact">
+    <main class="container contact-page">
+        <section id="contact" class="contact-section">
             <h3>Entre em Contato</h3>
-            <address>
-                <p><strong>Endereço:</strong><br>Rua Professor Arnauld Cabral, 62 - Nazareth<br>Vitória, Espírito Santo - Brasil</p>
-                <p><strong>Telefone:</strong><br><a href="tel:+5527997396222">(+55) 27 997396222</a></p>
-                <p><strong>Email:</strong><br><a href="mailto:diegobernardessv@gmail.com">diegobernardessv@gmail.com</a></p>
-            </address>
-        </section>
+            <p class="contact-intro">
+                Vamos conversar sobre oportunidades, projetos e soluções digitais. Respondo rápido e com atenção.
+            </p>
 
-        <section id="social">
-            <h4>Redes Sociais</h4>
-                <address aria-label="Links Sociais">
-                    <a href="https://www.linkedin.com/in/diegobernardessv" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=ff003c"/></a> |
-                    <a href="https://github.com/diegobernardessv" target="_blank"><img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=ff003c"/></a> |
-                    <a href="https://gitlab.com/diegobernardessv" target="_blank"><img src="https://img.shields.io/badge/GitLab-000000?style=flat-square&logo=gitlab&logoColor=ff003c"/></a>
-                </address>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua Professor Arnauld Cabral, 62 - Nazareth</p>
+                            <p>Vitória, Espírito Santo - Brasil</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Telefone</h4>
+                            <a href="tel:+5527997396222">(+55) 27 99739-6222</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:diegobernardessv@gmail.com">diegobernardessv@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/diegobernardessv" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/diegobernardessv" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://gitlab.com/diegobernardessv" target="_blank" rel="noopener" aria-label="GitLab">
+                                <i class="fab fa-gitlab"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-field">
+                            <label for="contact-name">Nome completo</label>
+                            <input id="contact-name" name="name" type="text" placeholder="Seu nome" required>
+                            <span class="field-error">Informe seu nome.</span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" name="email" type="email" placeholder="seuemail@email.com" required>
+                            <span class="field-error">Informe um email válido.</span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-subject">Assunto</label>
+                            <input id="contact-subject" name="subject" type="text" placeholder="Como posso ajudar?" required>
+                            <span class="field-error">Informe o assunto.</span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+                            <span class="field-error">Escreva uma mensagem.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-contact-submit">
+                            <i class="fas fa-paper-plane"></i> Enviar mensagem
+                        </button>
+
+                        <p id="contact-result" class="contact-result" role="status"></p>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 {% endblock %}
