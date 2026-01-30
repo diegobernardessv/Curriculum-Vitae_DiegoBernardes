@@ -672,6 +672,158 @@ article time::before {
 }
 
 /* ============================
+   6.2 PROJETOS
+   ============================ */
+.projects-page {
+    padding: 2rem 1.5rem 3rem;
+}
+
+.projects-section {
+    text-align: center;
+}
+
+.projects-intro {
+    color: var(--color-muted);
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.18);
+}
+
+.project-cover {
+    position: relative;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+}
+
+.project-cover--romaneios {
+    background: linear-gradient(135deg, #8b0000, #1a1a1a);
+}
+
+.project-cover--ncr {
+    background: linear-gradient(135deg, #1a1a1a, #8b0000);
+}
+
+.project-cover--portfolio {
+    background: linear-gradient(135deg, #0f0f0f, #5c0d0d);
+}
+
+.project-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.project-status {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-status--done {
+    background: rgba(255, 255, 255, 0.85);
+    color: #000000;
+}
+
+.project-body {
+    padding: 1.5rem;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-body h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.project-subtitle {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.project-body time {
+    color: #700505;
+    font-size: 0.8rem;
+}
+
+.project-body p {
+    color: #333333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tags span {
+    background: rgba(139, 0, 0, 0.12);
+    color: #700505;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-link {
+    margin-top: auto;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-link:hover {
+    color: var(--color-accent-light);
+}
+
+/* ============================
    7. FOOTER
    ============================ */
 .footer {
@@ -896,6 +1048,18 @@ article time::before {
         width: 32px;
         height: 32px;
         font-size: 0.9rem;
+    }
+
+    .projects-page {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .projects-grid {
+        gap: 1.5rem;
+    }
+
+    .project-body {
+        padding: 1.25rem;
     }
 }
 

@@ -3,48 +3,96 @@
 {% block title %}Projetos | Diego Bernardes Silva{% endblock %}
 
 {% block content %}
-    <main class="container">
-        <section id="projects">
+    <main class="container projects-page">
+        <section id="projects" class="projects-section">
             <h3>Meus Projetos</h3>
+            <p class="projects-intro">
+                Alguns projetos que mostram minha experiência em soluções web completas, automação de processos e
+                aplicações empresariais escaláveis.
+            </p>
 
-            <article>
-                <h4>RomaneiosApp - Plataforma de Automação de Fluxo de Suprimentos</h4>
-                <time class="datetime" datetime="2024-08">Ago 2024 - Presente</time>
-                <p>O RomaneiosApp é uma plataforma que moderniza a gestão de romaneios, transformando processos manuais
-                    em um controle robusto e digitalizado dos fluxos de suprimentos. Desenvolvido em Flask (Python) com
-                    PostgreSQL,<br> ele otimiza tudo, desde o registro até a assinatura e o acompanhamento das operações
-                    logísticas.</p>
-                <ul>
-                    <li><strong>🛠️ Backend:</strong> Construído com Python/Flask (Blueprints para modularidade).</li>
-                    <li><strong>🖥️ Frontend:</strong> HTML, CSS, JavaScript com Bootstrap.</li>
-                    <li><strong>🐘 Banco de Dados:</strong> PostgreSQL.</li>
-                </ul>
-                <p>🔗 <a href="https://romaneiosapp.dbsolutions.dev.br/" target="_blank">Acessar Projeto</a></p>
-            </article>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-cover project-cover--romaneios">
+                        <div class="project-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <span class="project-status">Em andamento</span>
+                    </div>
+                    <div class="project-body">
+                        <h4>RomaneiosApp</h4>
+                        <p class="project-subtitle">Plataforma de Automação de Fluxo de Suprimentos</p>
+                        <time class="datetime" datetime="2024-08">Ago 2024 - Presente</time>
+                        <p>
+                            Plataforma que moderniza a gestão de romaneios, digitalizando processos manuais e
+                            oferecendo rastreabilidade das operações logísticas.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>PostgreSQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a class="project-link" href="https://romaneiosapp.dbsolutions.dev.br/" target="_blank" rel="noopener">
+                            <i class="fas fa-arrow-up-right-from-square"></i> Acessar Projeto
+                        </a>
+                    </div>
+                </article>
 
-            <article>
-                <h4>NonConformity - Gestão de Não Conformidades</h4>
-                <time class="datetime" datetime="2025-01">Jan 2025 - Presente</time>
-                <p>Sistema web para modernizar e centralizar a gestão de Não Conformidades (NCR).</p>
-                <ul>
-                    <li><strong>🛠️ Backend:</strong> Python/Flask.</li>
-                    <li><strong>🖥️ Frontend:</strong> HTML, CSS, JavaScript com Bootstrap.</li>
-                    <li><strong>🐘 Banco de Dados:</strong> PostgreSQL.</li>
-                </ul>
-                <p>🔗 <a href="https://nonconformity.dbsolutions.dev.br/" target="_blank">Acessar Projeto</a></p>
-            </article>
+                <article class="project-card">
+                    <div class="project-cover project-cover--ncr">
+                        <div class="project-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <span class="project-status">Em andamento</span>
+                    </div>
+                    <div class="project-body">
+                        <h4>NonConformity</h4>
+                        <p class="project-subtitle">Gestão de Não Conformidades</p>
+                        <time class="datetime" datetime="2025-01">Jan 2025 - Presente</time>
+                        <p>
+                            Sistema web para centralizar registros de NCR, melhorar o controle de qualidade e acelerar
+                            a tomada de decisão.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>PostgreSQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a class="project-link" href="https://nonconformity.dbsolutions.dev.br/" target="_blank" rel="noopener">
+                            <i class="fas fa-arrow-up-right-from-square"></i> Acessar Projeto
+                        </a>
+                    </div>
+                </article>
 
-            <article>
-                <h4>Portfólio Pessoal Dinâmico</h4>
-                <time class="datetime" datetime="2025-04">Abr 2025 - Jun 2025</time>
-                <p>Projeto de portfólio pessoal, uma aplicação web dinâmica desenvolvida para apresentar projetos,
-                    habilidades e informações de contato de forma moderna e interativa.</p>
-                <ul>
-                    <li><strong>🛠️ Backend:</strong> Python/Flask.</li>
-                    <li><strong>🖥️ Frontend:</strong> HTML, CSS, JavaScript com Bootstrap.</li>
-                </ul>
-                <p>🔗 <a href="https://www.dbsolutions.dev.br/" target="_blank">Acessar Projeto</a></p>
-            </article>
+                <article class="project-card">
+                    <div class="project-cover project-cover--portfolio">
+                        <div class="project-icon">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <span class="project-status project-status--done">Concluído</span>
+                    </div>
+                    <div class="project-body">
+                        <h4>Portfólio Pessoal Dinâmico</h4>
+                        <p class="project-subtitle">Experiência digital para marca pessoal</p>
+                        <time class="datetime" datetime="2025-04">Abr 2025 - Jun 2025</time>
+                        <p>
+                            Aplicação web interativa para apresentar projetos, habilidades e canais de contato de forma
+                            moderna e responsiva.
+                        </p>
+                        <div class="project-tags">
+                            <span>Flask</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a class="project-link" href="https://www.dbsolutions.dev.br/" target="_blank" rel="noopener">
+                            <i class="fas fa-arrow-up-right-from-square"></i> Acessar Projeto
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 {% endblock %}
