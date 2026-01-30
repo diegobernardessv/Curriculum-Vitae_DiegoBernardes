@@ -4,20 +4,19 @@ from flask import Flask, render_template
 # Cria uma instância da aplicação Flask
 app = Flask(__name__)
 
-# Configurações para desenvolvimento - força reload de templates
+# Configurações para desenvolvimento
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-# Verifica se estamos em ambiente de produção
-# WhiteNoise só é usado em produção para servir arquivos estáticos de forma eficiente
-# Em desenvolvimento, o Flask serve os arquivos estáticos diretamente (com hot reload)
-IS_PRODUCTION = os.environ.get('RENDER') or os.environ.get('FLASK_ENV') == 'production'
-
-if IS_PRODUCTION:
+# Configuração do WhiteNoise para Produção (Render)
+# Verificamos se estamos no Render ou em ambiente de produção
+if os.environ.get('RENDER') or os.environ.get('FLASK_ENV') == 'production':
     from whitenoise import WhiteNoise
-    # root='static/' indica a pasta física onde os arquivos estão
-    # prefix='static/' indica a URL que o navegador usará (ex: /static/css/style.css)
-    app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/', prefix='static/')
+    # Usar o caminho absoluto garante que o WhiteNoise encontre a pasta static no servidor
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    static_dir = os.path.join(base_dir, 'static')
+    # Configura o WhiteNoise para servir a pasta /static
+    app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
 
 # Define a rota para a página inicial (home)
 @app.route('/')
