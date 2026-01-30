@@ -295,6 +295,11 @@ function initBackToTop() {
         }
     };
 
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     toggleVisibility();
     window.addEventListener('scroll', toggleVisibility);
 }
