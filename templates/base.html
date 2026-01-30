@@ -36,7 +36,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pt-1" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('home') }}">
                             <i class="fas fa-home d-none d-sm-inline-block"></i> Início
@@ -56,6 +56,11 @@
                         <a class="nav-link" href="{{ url_for('contact') }}">
                             <i class="fas fa-envelope d-none d-sm-inline-block"></i> Contato
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>

@@ -8,7 +8,26 @@
     --color-muted: #b0b0b0;
     --color-accent: #8b0000;
     --color-accent-light: #ff4d4d;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f4f4f4;
+    --color-text-dark: #000000;
+    --color-text-soft: #333333;
     --nav-height: 90px;
+}
+
+body.theme-light {
+    --color-bg: #f7f7f7;
+    --color-bg-alt: #ffffff;
+    --color-text: #111111;
+    --color-muted: #555555;
+    --color-accent: #8b0000;
+    --color-accent-light: #d93636;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f0f0f0;
+    --color-text-dark: #111111;
+    --color-text-soft: #2b2b2b;
+    background-color: var(--color-bg);
+    background-image: linear-gradient(135deg, #ffffff, #f0f0f0, #ffffff);
 }
 
 * {
@@ -88,6 +107,26 @@ main ul {
     color: var(--color-accent-light) !important;
     border-bottom: 2px solid var(--color-accent-light);
     padding-bottom: 2px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000000;
+    border: 1px solid rgba(139, 0, 0, 0.8);
+    color: var(--color-accent-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: #0b0b0b;
+    color: #ffffff;
 }
 
 /* ============================
@@ -1015,6 +1054,14 @@ article time::before {
     box-shadow: 0 10px 25px rgba(139, 0, 0, 0.35);
 }
 
+.btn-contact-submit:disabled,
+.btn-contact-submit.is-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .contact-result {
     margin: 0;
     font-size: 0.9rem;
@@ -1071,6 +1118,99 @@ article time::before {
     background: #0b0b0b;
     color: #ffffff;
     box-shadow: 0 12px 24px rgba(139, 0, 0, 0.35);
+}
+
+/* ============================
+   6.5 TEMA CLARO (OVERRIDES)
+   ============================ */
+body.theme-light .custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.theme-light .custom-navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.theme-light .navbar .navbar-brand,
+body.theme-light .navbar .nav-link {
+    color: var(--color-text);
+}
+
+body.theme-light .theme-toggle {
+    background: #ffffff;
+    color: var(--color-accent);
+    border: 1px solid rgba(139, 0, 0, 0.5);
+}
+
+body.theme-light section h3 {
+    color: var(--color-text);
+    border-bottom-color: #d0d0d0;
+}
+
+body.theme-light article,
+body.theme-light address,
+body.theme-light .timeline-content,
+body.theme-light .course-card,
+body.theme-light .project-card,
+body.theme-light .contact-card,
+body.theme-light .contact-social,
+body.theme-light .contact-form-wrapper {
+    background: var(--color-surface);
+}
+
+body.theme-light article h4,
+body.theme-light .timeline-content h4,
+body.theme-light .course-card h4,
+body.theme-light .project-body h4,
+body.theme-light .contact-card h4,
+body.theme-light .form-field label {
+    color: var(--color-text-dark);
+}
+
+body.theme-light article p,
+body.theme-light article ul li,
+body.theme-light address p,
+body.theme-light .timeline-content p,
+body.theme-light .timeline-list li,
+body.theme-light .course-provider,
+body.theme-light .project-body p,
+body.theme-light .project-subtitle,
+body.theme-light .project-link--repo,
+body.theme-light .contact-card p,
+body.theme-light .contact-card a {
+    color: var(--color-text-soft);
+}
+
+body.theme-light .tech-section {
+    background: linear-gradient(180deg, #ffffff, #f0f0f0);
+}
+
+body.theme-light .social-link,
+body.theme-light .social-links a {
+    background: #ffffff;
+    border-color: rgba(139, 0, 0, 0.5);
+    color: var(--color-accent);
+}
+
+body.theme-light .social-link:hover,
+body.theme-light .social-links a:hover {
+    background: #f2f2f2;
+    color: var(--color-accent);
+}
+
+body.theme-light .footer {
+    background-color: #ffffff;
+    background-image: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #111111;
+}
+
+body.theme-light .footer__item {
+    color: #333333;
+}
+
+body.theme-light .footer__item:hover {
+    color: var(--color-accent);
 }
 
 /* ============================

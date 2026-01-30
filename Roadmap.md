@@ -74,10 +74,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 7: Interatividade e UX 🚧
+### Fase 7: Interatividade e UX ✅
 - [x] Animações de scroll (IntersectionObserver)
-- [ ] Loading states e feedback visual
-- [ ] Modo claro/escuro (dark mode toggle)
+- [x] Loading states e feedback visual
+- [x] Modo claro/escuro (dark mode toggle)
 - [x] Back to top button
 
 ---
@@ -128,6 +128,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Ícones de redes sociais com fundo preto e destaque em vermelho
 - Animações de scroll ativadas no site
 - Botão flutuante de voltar ao topo
+
+### v1.6.0 - 30/01/2026
+- Modo claro/escuro com preferencia salva no navegador
+- Loading state no formulario de contato
 
 ---
 

@@ -187,6 +187,16 @@ function initContactForm() {
     };
 
     const result = document.getElementById('contact-result');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    const setLoading = (isLoading) => {
+        if (!submitButton) return;
+        submitButton.disabled = isLoading;
+        submitButton.classList.toggle('is-loading', isLoading);
+        submitButton.innerHTML = isLoading
+            ? '<i class="fas fa-spinner fa-spin"></i> Enviando...'
+            : '<i class="fas fa-paper-plane"></i> Enviar mensagem';
+    };
 
     const validateField = (field, validator) => {
         const wrapper = field.closest('.form-field');
@@ -226,13 +236,51 @@ function initContactForm() {
             result.classList.remove('is-error');
         }
 
+        setLoading(true);
+
         window.location.href = `mailto:diegobernardessv@gmail.com?subject=${subject}&body=${body}`;
         form.reset();
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 1200);
     });
 }
 
 // ============================
-// 7. BACK TO TOP
+// 7. TEMA CLARO/ESCURO
+// ============================
+
+function initThemeToggle() {
+    const button = document.getElementById('theme-toggle');
+    if (!button) return;
+
+    const body = document.body;
+    const icon = button.querySelector('i');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+        body.classList.add('theme-light');
+    }
+
+    const updateIcon = () => {
+        if (!icon) return;
+        const isLight = body.classList.contains('theme-light');
+        icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+    };
+
+    updateIcon();
+
+    button.addEventListener('click', () => {
+        body.classList.toggle('theme-light');
+        const isLight = body.classList.contains('theme-light');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        updateIcon();
+    });
+}
+
+// ============================
+// 8. BACK TO TOP
 // ============================
 
 function initBackToTop() {
@@ -252,7 +300,7 @@ function initBackToTop() {
 }
 
 // ============================
-// 8. INICIALIZACAO
+// 9. INICIALIZACAO
 // ============================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -283,6 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa formulario de contato
     initContactForm();
+
+    // Inicializa tema claro/escuro
+    initThemeToggle();
 
     // Inicializa botao voltar ao topo
     initBackToTop();
