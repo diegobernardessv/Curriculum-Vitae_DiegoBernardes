@@ -84,10 +84,11 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### Fase 8: Performance e SEO
 - [ ] Otimização de imagens
-- [ ] Meta tags completas para SEO
-- [ ] Open Graph para compartilhamento em redes sociais
+- [x] Meta tags completas para SEO
+- [x] Open Graph para compartilhamento em redes sociais
 - [ ] Favicon personalizado
-- [ ] Sitemap.xml
+- [x] Sitemap.xml
+- [x] Robots.txt
 
 ---
 
@@ -132,6 +133,11 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 ### v1.6.0 - 30/01/2026
 - Modo claro/escuro com preferencia salva no navegador
 - Loading state no formulario de contato
+
+### v1.7.0 - 30/01/2026
+- Meta tags globais para SEO e Open Graph
+- Preconnect para CDNs externos
+- Sitemap.xml e robots.txt adicionados
 
 ---
 

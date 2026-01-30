@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 # Cria uma instância da aplicação Flask
 app = Flask(__name__)
@@ -17,6 +17,9 @@ if os.environ.get('RENDER') or os.environ.get('FLASK_ENV') == 'production':
     static_dir = os.path.join(base_dir, 'static')
     # Configura o WhiteNoise para servir a pasta /static
     app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
+
+# Diretório absoluto para arquivos estáticos utilitários
+STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 
 # Define a rota para a página inicial (home)
 @app.route('/')
@@ -42,6 +45,17 @@ def projects():
 def contact():
     """Renderiza a página de contato."""
     return render_template('contact.html')
+
+# Rotas auxiliares para SEO
+@app.route('/sitemap.xml')
+def sitemap():
+    """Entrega o sitemap do site."""
+    return send_from_directory(STATIC_DIR, 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots():
+    """Entrega o robots.txt do site."""
+    return send_from_directory(STATIC_DIR, 'robots.txt')
 
 # Permite executar o servidor diretamente com 'python app.py'
 if __name__ == '__main__':
