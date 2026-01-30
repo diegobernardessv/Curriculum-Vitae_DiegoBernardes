@@ -2,6 +2,8 @@
 
 {% block title %}Início | Diego Bernardes Silva{% endblock %}
 
+{% block main_class %}{% endblock %}
+
 {% block meta_tags %}
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -11,27 +13,168 @@
     <meta name="author" content="Diego Bernardes Silva">
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes">
-    <meta property="og:title" content="Currículo | Diego Bernardes Silva">
+    <meta property="og:url" content="https://www.dbsolutions.dev.br/">
+    <meta property="og:title" content="Diego Bernardes Silva | Desenvolvedor FullStack">
     <meta property="og:description"
         content="Analista de Sistemas e Desenvolvedor FullStack. Confira meus projetos e experiências.">
-    <meta property="og:image" content="https://github.com/diegobernardessv.png"> <!-- Foto do GitHub -->
+    <meta property="og:image" content="{{ url_for('static', filename='img/fotoperfil.jpg') }}">
 {% endblock %}
 
 {% block content %}
-    <!-- Cabeçalho Principal: Identificação e Contato -->
-    <header>
-        <!-- Foto de Perfil Visível -->
-        <img src="https://github.com/diegobernardessv.png" alt="Foto de Diego Bernardes Silva" width="250" height="250">
-        <h1>Diego Bernardes Silva</h1>
-        <h2>Software Engineer | Desenvolvedor FullStack</h2>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-center min-vh-100">
+                <div class="col-lg-10">
+                    <div class="hero-content text-center">
+                        <!-- Foto de Perfil -->
+                        <div class="hero-image-wrapper animate-fade-in">
+                            <img src="{{ url_for('static', filename='img/fotoperfil.jpg') }}" 
+                                 alt="Foto de Diego Bernardes Silva" 
+                                 class="hero-profile-img">
+                            <div class="hero-image-ring"></div>
+                        </div>
 
-    <main class="container">
-        <section>
-            <p>Bem-vindo ao meu portfólio online. Aqui você encontrará detalhes sobre minha trajetória profissional,
-                projetos desenvolvidos e habilidades técnicas.</p>
-            <p>Navegue pelo menu acima para saber mais.</p>
-        </section>
-    </main>
+                        <!-- Apresentação -->
+                        <div class="hero-text animate-slide-up">
+                            <p class="hero-greeting">Olá, eu sou</p>
+                            <h1 class="hero-name">Diego Bernardes Silva</h1>
+                            <h2 class="hero-title">
+                                <span class="typewriter" id="typewriter"></span>
+                                <span class="typewriter-cursor">|</span>
+                            </h2>
+                            <p class="hero-description">
+                                Transformando ideias em soluções digitais. Especializado em desenvolvimento web 
+                                com Python/Flask, criando aplicações robustas e interfaces modernas.
+                            </p>
+                        </div>
+
+                        <!-- Botões de Ação -->
+                        <div class="hero-actions animate-slide-up-delay">
+                            <a href="{{ url_for('projects') }}" class="btn btn-hero-primary">
+                                <i class="fas fa-rocket"></i> Ver Projetos
+                            </a>
+                            <a href="{{ url_for('resume') }}" class="btn btn-hero-secondary">
+                                <i class="fas fa-file-alt"></i> Meu Currículo
+                            </a>
+                        </div>
+
+                        <!-- Redes Sociais -->
+                        <div class="hero-social animate-fade-in-delay">
+                            <a href="https://www.linkedin.com/in/diegobernardessv" target="_blank" 
+                               class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/diegobernardessv" target="_blank" 
+                               class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://gitlab.com/diegobernardessv" target="_blank" 
+                               class="social-link" aria-label="GitLab">
+                                <i class="fab fa-gitlab"></i>
+                            </a>
+                            <a href="mailto:diegobernardessv@gmail.com" 
+                               class="social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+
+                        <!-- Scroll Indicator -->
+                        <div class="scroll-indicator animate-bounce">
+                            <a href="#about" class="scroll-link">
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Sobre Mim</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Sou um profissional apaixonado por tecnologia com mais de 10 anos de experiência 
+                            na área de suprimentos e gestão de dados. Minha jornada no desenvolvimento de 
+                            software começou como uma forma de automatizar processos e criar soluções que 
+                            facilitam o dia a dia das pessoas.
+                        </p>
+                        <p>
+                            Atualmente, atuo como <strong>Desenvolvedor FullStack Freelancer</strong>, 
+                            criando aplicações web completas utilizando Python/Flask no backend e 
+                            HTML, CSS, JavaScript com Bootstrap no frontend. Também possuo experiência 
+                            com Power BI para análise de dados e dashboards corporativos.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-code"></i>
+                                <span>Desenvolvedor FullStack</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Analista de Dados</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Análise e Desenvolvimento de Sistemas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tecnologias -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Tecnologias</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item" title="Python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item" title="JavaScript">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item" title="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item" title="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item" title="Bootstrap">
+                    <i class="fab fa-bootstrap"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="tech-item" title="PostgreSQL">
+                    <i class="fas fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-item" title="Git">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="tech-item" title="Power BI">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Power BI</span>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
+

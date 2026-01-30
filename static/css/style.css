@@ -22,6 +22,11 @@ body {
 2. LAYOUT & CONTAINERS
    ============================ */
 
+/* Padding para páginas internas (exceto home) */
+.page-content {
+    padding-top: 100px;
+}
+
 /* Containers centrais */
 .container,
 main.container {
@@ -37,10 +42,17 @@ main.container {
 3. NAVBAR
    ============================ */
 .custom-navbar {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.95);
     border-bottom: 2px solid #8b0000;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 1030;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.custom-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.98);
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
 }
 
 .navbar .nav-link {
@@ -71,14 +83,6 @@ main.container {
     color: #ff4d4d;
 }
 
-/* Sombra quando a navbar rola */
-.shadow-on-scroll {
-    box-shadow: none;
-}
-
-.scrolled .shadow-on-scroll {
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
-}
 
 /* ============================
 4. HEADER (Página Inicial)
@@ -283,4 +287,508 @@ article time::before {
 
 .profile_picture {
     border: solid 1px black;
+}
+
+/* ============================
+8. HERO SECTION
+   ============================ */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(139, 0, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Foto de Perfil */
+.hero-image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+}
+
+.hero-profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #8b0000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-profile-img:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+.hero-image-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ff4d4d;
+    border-radius: 50%;
+    animation: rotate-ring 20s linear infinite;
+}
+
+@keyframes rotate-ring {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Texto do Hero */
+.hero-text {
+    margin-bottom: 2rem;
+}
+
+.hero-greeting {
+    font-size: 1.2rem;
+    color: #ff4d4d;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    min-height: 2rem;
+}
+
+.typewriter {
+    color: #ff4d4d;
+}
+
+.typewriter-cursor {
+    color: #ff4d4d;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Botões do Hero */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, #8b0000, #ff4d4d);
+    color: #ffffff;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.btn-hero-secondary {
+    background: transparent;
+    color: #ffffff;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid #8b0000;
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(139, 0, 0, 0.2);
+    transform: translateY(-3px);
+    color: #ff4d4d;
+}
+
+/* Redes Sociais do Hero */
+.hero-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #8b0000;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
+}
+
+/* Indicador de Scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-link {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.scroll-link:hover {
+    color: #ffffff;
+}
+
+/* ============================
+9. SEÇÃO SOBRE
+   ============================ */
+.about-section {
+    padding: 5rem 0;
+    background: #0a0a0a;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #ff4d4d);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.about-content {
+    background: #101010;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+}
+
+.about-content p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(139, 0, 0, 0.1);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(139, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.highlight-item i {
+    color: #ff4d4d;
+}
+
+/* ============================
+10. SEÇÃO DE TECNOLOGIAS
+   ============================ */
+.tech-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #0a0a0a, #000000);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #101010;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    border-color: #ff4d4d;
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover i {
+    transform: scale(1.1);
+}
+
+.tech-item span {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ============================
+11. ANIMAÇÕES
+   ============================ */
+/* Fade In */
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Up */
+.animate-slide-up {
+    animation: slideUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.animate-slide-up-delay {
+    animation: slideUp 1s ease 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce */
+.animate-bounce {
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ============================
+12. RESPONSIVIDADE ADICIONAL
+   ============================ */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .hero-social {
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .highlight-item {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tech-item {
+        padding: 1rem;
+    }
+
+    .tech-item i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-name {
+        font-size: 1.75rem;
+    }
+
+    .hero-greeting {
+        font-size: 1rem;
+    }
 }
