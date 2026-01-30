@@ -3,79 +3,125 @@
 {% block title %}Currículo | Diego Bernardes Silva{% endblock %}
 
 {% block content %}
-    <main class="container">
-        <section id="skills">
+    <main class="container resume-page">
+        <section id="resume-skills" class="resume-section">
             <h3>Skills</h3>
-            <article>
-                <p>HTML, CSS, JavaScript, Python, PostgreSQL, SAP Fiori, Power BI, Microsoft Excel</p>
-            </article>
+            <div class="skills-grid">
+                <span class="skill-chip">HTML5</span>
+                <span class="skill-chip">CSS3</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Flask</span>
+                <span class="skill-chip">PostgreSQL</span>
+                <span class="skill-chip">Power BI</span>
+                <span class="skill-chip">SAP Fiori</span>
+                <span class="skill-chip">Microsoft Excel</span>
+                <span class="skill-chip">Git/GitHub</span>
+            </div>
         </section>
 
-        <section id="education">
+        <section id="education" class="resume-section">
             <h3>Formação</h3>
-            <article>
-                <h4 class="formation">Análise e Desenvolvimento de Sistemas</h4>
-                <p>Estacio, Vitória - Espírito Santo</p>
-                <time class="datetime" datetime="2021-11">Nov 2021 - Nov 2023</time>
-            </article>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Análise e Desenvolvimento de Sistemas</h4>
+                        <p>Estacio, Vitória - Espírito Santo</p>
+                        <time class="datetime" datetime="2021-11">Nov 2021 - Nov 2023</time>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="experience">
+        <section id="experience" class="resume-section">
             <h3>Experiência Profissional</h3>
-            <article>
-                <h4 class="job">Desenvolvedor FullStack (Freelancer)</h4>
-                <p>Vitória - Espírito Santo</p>
-                <time class="datetime" datetime="2024-01">Jan 2024 - Presente</time>
-                <ul>
-                    <li><strong>Desenvolvimento de soluções web:</strong> criação e implantação de aplicações web
-                        responsivas e dinâmicas utilizando Python no back-end e HTML5/CSS/JavaScript no front-end.</li>
-                    <li><strong>Versionamento e deploy:</strong> gestão de código-fonte com Git/GitHub e realização de
-                        deploys em ambientes de nuvem.</li>
-                </ul>
-            </article>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Desenvolvedor FullStack (Freelancer)</h4>
+                        <p>Vitória - Espírito Santo</p>
+                        <time class="datetime" datetime="2024-01">Jan 2024 - Presente</time>
+                        <ul class="timeline-list">
+                            <li><strong>Desenvolvimento de soluções web:</strong> criação e implantação de aplicações web
+                                responsivas e dinâmicas utilizando Python no back-end e HTML5/CSS/JavaScript no front-end.</li>
+                            <li><strong>Versionamento e deploy:</strong> gestão de código-fonte com Git/GitHub e realização de
+                                deploys em ambientes de nuvem.</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <article>
-                <h4 class="job">Técnico de Suprimentos - Grupo Simec</h4>
-                <p>Cariacica - Espírito Santo</p>
-                <time class="datetime" datetime="2012-01">Jan 2012 - Presente</time>
-                <ul>
-                    <li><strong>Interface Técnica e Key User:</strong> Atuação como ponto focal entre o almoxarifado e a
-                        TI no TOTVS Protheus.</li>
-                    <li><strong>Gestão de Dados e KPIs:</strong> Compilação de dados mensais e dashboards em Power BI.
-                    </li>
-                    <li><strong>Capacitação Corporativa:</strong> Treinamento técnico do ERP TOTVS Protheus.</li>
-                </ul>
-            </article>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Técnico de Suprimentos - Grupo Simec</h4>
+                        <p>Cariacica - Espírito Santo</p>
+                        <time class="datetime" datetime="2012-01">Jan 2012 - Presente</time>
+                        <ul class="timeline-list">
+                            <li><strong>Interface Técnica e Key User:</strong> atuação como ponto focal entre o almoxarifado e a
+                                TI no TOTVS Protheus.</li>
+                            <li><strong>Gestão de Dados e KPIs:</strong> compilação de dados mensais e dashboards em Power BI.</li>
+                            <li><strong>Capacitação Corporativa:</strong> treinamento técnico do ERP TOTVS Protheus.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="courses">
+        <section id="courses" class="resume-section">
             <h3>Cursos</h3>
-            <article>
-                <ul>
-                    <li><strong>Microsoft Excel + Power BI - Formação Especialista, <em>Udemy</em></strong></li>
+            <div class="course-list">
+                <div class="course-card">
+                    <h4>Microsoft Excel + Power BI - Formação Especialista</h4>
+                    <p class="course-provider">Udemy</p>
                     <time class="datetime" datetime="2024-02">Fev 2024 - Mar 2024</time>
-                    <li><strong>FullStack Web Developer using Flask, Python, HTML, CSS and MongoDB,
-                            <em>Udemy</em></strong></li>
+                </div>
+                <div class="course-card">
+                    <h4>FullStack Web Developer using Flask, Python, HTML, CSS and MongoDB</h4>
+                    <p class="course-provider">Udemy</p>
                     <time class="datetime" datetime="2024-05">Mai 2024 - Jul 2024</time>
-                    <li><strong>Power BI Avançado, <em>Udemy</em></strong></li>
+                </div>
+                <div class="course-card">
+                    <h4>Power BI Avançado</h4>
+                    <p class="course-provider">Udemy</p>
                     <time class="datetime" datetime="2025-01">Jan 2025 - Fev 2025</time>
-                    <li><strong>TOTVS Protheus - Módulo Estoque / Custos, <em>Udemy</em></strong></li>
-                    <time class="datetime" datetime="2025-5">Mai 2025 - Jul 2025</time>
-                    <li><strong>SAP Fiori FullStack Trainee, <em>Megawork Consulting</em></strong></li>
+                </div>
+                <div class="course-card">
+                    <h4>TOTVS Protheus - Módulo Estoque / Custos</h4>
+                    <p class="course-provider">Udemy</p>
+                    <time class="datetime" datetime="2025-05">Mai 2025 - Jul 2025</time>
+                </div>
+                <div class="course-card">
+                    <h4>SAP Fiori FullStack Trainee</h4>
+                    <p class="course-provider">Megawork Consulting</p>
                     <time class="datetime" datetime="2025-11">Nov 2025 - Dez 2025</time>
-                </ul>
-            </article>
+                </div>
+            </div>
         </section>
 
-        <section id="languages">
+        <section id="languages" class="resume-section">
             <h3>Idiomas</h3>
-            <article>
-                <ul>
-                    <li>Inglês - Intermediário</li>
-                    <li>Espanhol - Básico</li>
-                    <li>Português - Nativo</li>
-                </ul>
-            </article>
+            <div class="language-list">
+                <div class="language-item">
+                    <i class="fas fa-language"></i>
+                    <span>Inglês - Intermediário</span>
+                </div>
+                <div class="language-item">
+                    <i class="fas fa-language"></i>
+                    <span>Espanhol - Básico</span>
+                </div>
+                <div class="language-item">
+                    <i class="fas fa-language"></i>
+                    <span>Português - Nativo</span>
+                </div>
+            </div>
         </section>
     </main>
 {% endblock %}

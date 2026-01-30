@@ -47,11 +47,11 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 4: Página Currículo
-- [ ] Timeline visual para experiência profissional
-- [ ] Cards de skills com barras de progresso ou ícones
-- [ ] Seção de formação com cards estilizados
-- [ ] Seção de cursos com badges
+### Fase 4: Página Currículo 🚧
+- [x] Timeline visual para experiência profissional
+- [x] Cards de skills com ícones
+- [x] Seção de formação com cards estilizados
+- [x] Seção de cursos com cards
 - [ ] Botão de download do currículo em PDF
 
 ---
@@ -106,6 +106,12 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Navbar com efeito blur e indicador de página ativa
 - Smooth scroll para navegação interna
 - Redes sociais com hover effects
+
+### v1.2.0 - 30/01/2026
+- Página Currículo com timeline profissional
+- Skills em formato de chips
+- Cursos em cards responsivos
+- Idiomas com badges e ícones
 
 ---
 
