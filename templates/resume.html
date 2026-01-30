@@ -123,5 +123,13 @@
                 </div>
             </div>
         </section>
+
+        <section id="resume-download" class="resume-section resume-download">
+            <h3>Download do Currículo</h3>
+            <p>Baixe meu currículo em PDF para consulta offline.</p>
+            <a class="btn btn-resume-download" href="{{ url_for('static', filename='files/cv-diego-bernardes.pdf') }}" download>
+                <i class="fas fa-download"></i> Baixar Currículo (PDF)
+            </a>
+        </section>
     </main>
 {% endblock %}

@@ -47,12 +47,12 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 4: Página Currículo 🚧
+### Fase 4: Página Currículo ✅
 - [x] Timeline visual para experiência profissional
 - [x] Cards de skills com ícones
 - [x] Seção de formação com cards estilizados
 - [x] Seção de cursos com cards
-- [ ] Botão de download do currículo em PDF
+- [x] Botão de download do currículo em PDF
 
 ---
 
@@ -112,6 +112,7 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Skills em formato de chips
 - Cursos em cards responsivos
 - Idiomas com badges e ícones
+- Botão de download do currículo em PDF
 
 ---
 
