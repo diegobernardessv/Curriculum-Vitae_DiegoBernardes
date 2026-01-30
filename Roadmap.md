@@ -74,11 +74,11 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 7: Interatividade e UX
-- [ ] Animações de scroll (AOS - Animate on Scroll)
+### Fase 7: Interatividade e UX 🚧
+- [x] Animações de scroll (IntersectionObserver)
 - [ ] Loading states e feedback visual
 - [ ] Modo claro/escuro (dark mode toggle)
-- [ ] Back to top button
+- [x] Back to top button
 
 ---
 
@@ -123,6 +123,11 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Página Contato reformulada com layout em grade
 - Cards de contato com ícones e links diretos
 - Formulário com validação e envio via mailto
+
+### v1.5.0 - 30/01/2026
+- Ícones de redes sociais com fundo preto e destaque em vermelho
+- Animações de scroll ativadas no site
+- Botão flutuante de voltar ao topo
 
 ---
 

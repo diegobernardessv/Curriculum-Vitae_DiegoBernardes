@@ -335,22 +335,22 @@ article time::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(139, 0, 0, 0.5);
+    background: #000000;
+    border: 1px solid rgba(139, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text);
+    color: var(--color-accent-light);
     font-size: 1.25rem;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    background: var(--color-accent);
+    background: #0b0b0b;
     color: #ffffff;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.35);
 }
 
 .scroll-indicator {
@@ -924,8 +924,8 @@ article time::before {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(139, 0, 0, 0.15);
-    border: 1px solid rgba(139, 0, 0, 0.35);
+    background: #000000;
+    border: 1px solid rgba(139, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -935,7 +935,7 @@ article time::before {
 }
 
 .social-links a:hover {
-    background: var(--color-accent);
+    background: #0b0b0b;
     color: #ffffff;
     transform: translateY(-2px);
 }
@@ -1023,6 +1023,54 @@ article time::before {
 
 .contact-result.is-error {
     color: #b00020;
+}
+
+/* ============================
+   6.4 UTILITARIOS
+   ============================ */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #000000;
+    border: 1px solid rgba(139, 0, 0, 0.8);
+    color: var(--color-accent-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 1050;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #0b0b0b;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(139, 0, 0, 0.35);
 }
 
 /* ============================

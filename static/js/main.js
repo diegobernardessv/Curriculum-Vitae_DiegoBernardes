@@ -232,7 +232,27 @@ function initContactForm() {
 }
 
 // ============================
-// 7. INICIALIZACAO
+// 7. BACK TO TOP
+// ============================
+
+function initBackToTop() {
+    const button = document.getElementById('back-to-top');
+    if (!button) return;
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    };
+
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+}
+
+// ============================
+// 8. INICIALIZACAO
 // ============================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -263,6 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa formulario de contato
     initContactForm();
+
+    // Inicializa botao voltar ao topo
+    initBackToTop();
 
     console.log('🚀 Portfólio Diego Bernardes - Scripts carregados!');
 });
