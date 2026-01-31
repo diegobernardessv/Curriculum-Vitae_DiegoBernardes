@@ -114,10 +114,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 12: Refino de UI 🚧
+### Fase 12: Refino de UI ✅
 - [x] Microinterações
 - [x] Ajustes de tipografia
-- [ ] Espaçamentos finos
+- [x] Espaçamentos finos
 
 ---
 
@@ -202,6 +202,9 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 ### v1.15.0 - 30/01/2026
 - Tipografia refinada e suavizada
 - Microinteracoes em cards e links
+
+### v1.16.0 - 30/01/2026
+- Ajustes finos de espaçamento entre seções
 
 ---
 
