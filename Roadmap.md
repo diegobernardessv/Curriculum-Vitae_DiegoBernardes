@@ -114,9 +114,9 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 12: Refino de UI
-- [ ] Microinterações
-- [ ] Ajustes de tipografia
+### Fase 12: Refino de UI 🚧
+- [x] Microinterações
+- [x] Ajustes de tipografia
 - [ ] Espaçamentos finos
 
 ---
@@ -198,6 +198,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 ### v1.14.0 - 30/01/2026
 - Icones marcados como decorativos (aria-hidden)
 - Fase 11 (WCAG) concluida
+
+### v1.15.0 - 30/01/2026
+- Tipografia refinada e suavizada
+- Microinteracoes em cards e links
 
 ---
 
