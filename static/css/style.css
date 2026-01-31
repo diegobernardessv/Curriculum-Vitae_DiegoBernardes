@@ -46,6 +46,9 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* ============================
+   2. BASE & ACESSIBILIDADE
+   ============================ */
 /* Acessibilidade: Skip link */
 .skip-link {
     position: absolute;
@@ -65,8 +68,18 @@ body {
     top: 16px;
 }
 
+/* Acessibilidade: foco visivel */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(255, 77, 77, 0.8);
+    outline-offset: 2px;
+}
+
 /* ============================
-   2. LAYOUT & ESTRUTURA
+   3. LAYOUT & ESTRUTURA
    ============================ */
 .page-content {
     padding-top: var(--nav-height);
@@ -87,7 +100,7 @@ main ul {
 }
 
 /* ============================
-   3. NAVBAR
+   4. NAVBAR
    ============================ */
 .custom-navbar {
     background-color: rgba(0, 0, 0, 0.95);
@@ -139,16 +152,6 @@ main ul {
     padding-bottom: 2px;
 }
 
-/* Acessibilidade: foco visivel */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-    outline: 3px solid rgba(255, 77, 77, 0.8);
-    outline-offset: 2px;
-}
-
 /* Theme toggle */
 .theme-toggle {
     width: 40px;
@@ -170,7 +173,7 @@ select:focus-visible {
 }
 
 /* ============================
-   4. SEÇÕES & CARDS
+   5. SEÇÕES & CARDS BASE
    ============================ */
 section h3 {
     color: #ffffff;
@@ -233,7 +236,7 @@ article time::before {
 }
 
 /* ============================
-   5. HERO SECTION
+   6. HERO SECTION
    ============================ */
 .hero-section {
     min-height: 100vh;
@@ -279,32 +282,12 @@ article time::before {
     transition: none;
 }
 
-
 .hero-image-ring {
     position: absolute;
     inset: 0;
     border-radius: 50%;
     border: 2px solid #8b0000;
     box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
-}
-
-.hero-image-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 1px solid rgba(139, 0, 0, 0.45);
-    box-shadow: 0 0 12px rgba(139, 0, 0, 0.35);
-    pointer-events: none;
-}
-
-.hero-image-wrapper::before {
-    content: "";
-    position: absolute;
-    inset: -8px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 0, 0, 0.18) 0%, transparent 70%);
-    pointer-events: none;
 }
 
 .hero-text {
@@ -471,7 +454,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6. SOBRE & TECNOLOGIAS
+   7. SOBRE & TECNOLOGIAS
    ============================ */
 .about-section {
     padding: 4.5rem 0;
@@ -592,7 +575,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6.1 CURRICULO
+   8. CURRÍCULO
    ============================ */
 .resume-page {
     padding: 2rem 1.5rem 2.5rem;
@@ -777,7 +760,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6.2 PROJETOS
+   9. PROJETOS
    ============================ */
 .projects-page {
     padding: 2rem 1.5rem 2.5rem;
@@ -945,7 +928,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6.3 CONTATO
+   10. CONTATO
    ============================ */
 .contact-page {
     padding: 2rem 1.5rem 2.5rem;
@@ -1151,7 +1134,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6.4 UTILITARIOS
+   11. UTILITÁRIOS
    ============================ */
 .animate-on-scroll {
     opacity: 0;
@@ -1199,7 +1182,7 @@ body.theme-light .btn-hero-secondary {
 }
 
 /* ============================
-   6.5 TEMA CLARO (OVERRIDES)
+   12. TEMA CLARO (OVERRIDES)
    ============================ */
 body.theme-light .custom-navbar {
     background-color: rgba(255, 255, 255, 0.95);
@@ -1306,7 +1289,7 @@ body.theme-light .skip-link {
 }
 
 /* ============================
-   7. FOOTER
+   13. FOOTER
    ============================ */
 .footer {
     background-color: #000000;
@@ -1383,7 +1366,7 @@ body.theme-light .skip-link {
 }
 
 /* ============================
-   8. ANIMAÇÕES
+   14. ANIMAÇÕES
    ============================ */
 .animate-fade-in {
     animation: fadeIn 1s ease forwards;
@@ -1441,7 +1424,7 @@ body.theme-light .skip-link {
 }
 
 /* ============================
-   9. RESPONSIVIDADE
+   15. RESPONSIVIDADE
    ============================ */
 @media (max-width: 768px) {
     .hero-name {
