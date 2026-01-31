@@ -118,7 +118,9 @@
             <section class="right">
                 <div class="footer__info">
                     <p class="footer__text">
-                        <a href="https://www.linkedin.com/in/diegobernardessv" class="footer__item">&copy; 2026 DB Solutions' - Todos os direitos reservados.</a>
+                        <a href="https://www.linkedin.com/in/diegobernardessv" class="footer__item">
+                            &copy; 2026 DB Solutions' - {{ footer_rights|default('Todos os direitos reservados.') }}
+                        </a>
                     </p>
                     <p class="footer__version">Version 1.0.0</p>
                 </div>
