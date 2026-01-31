@@ -23,10 +23,10 @@
     <meta name="keywords" content="Diego Bernardes, Software Engineer, Indie Hacker, SaaS, Logistics Automation, Python, FastAPI, Flask, JavaScript">
     <meta name="author" content="Diego Bernardes Silva">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.dbsolutions.dev.br/">
+    <meta property="og:url" content="https://www.dbsolutions.dev.br/en">
     <meta property="og:title" content="Diego Bernardes Silva | Software Engineer">
     <meta property="og:description" content="Independent software engineer building SaaS products for logistics automation.">
-    <meta property="og:image" content="{{ url_for('static', filename='img/fotoperfil.jpg') }}">
+    <meta property="og:image" content="{{ url_for('static', filename='img/fotoperfil.jpg', _external=True) }}">
 {% endblock %}
 
 {% block content %}
@@ -48,14 +48,14 @@
                         </div>
 
                         <div class="hero-text animate-slide-up">
-                            <p class="hero-greeting">Hi' i'm</p>
+                            <p class="hero-greeting">Hi, I'm</p>
                             <h1 class="hero-name">Diego Bernardes Silva</h1>
                             <h2 class="hero-title">
                                 <span class="typewriter" id="typewriter" data-titles="Software Engineer | Indie Hacker | Logistics Automation | Python (FastAPI/Flask) | SaaS Builder"></span>
                                 <span class="typewriter-cursor">|</span>
                             </h2>
                             <p class="hero-description">
-                                Software engineer focused on building real products, bridging backend, data, and UX.
+                                Software engineer focused on building real products across backend, data, and UX.
                                 Specialized in logistics automation, Python (FastAPI/Flask), and JavaScript.
                             </p>
                         </div>
@@ -66,6 +66,9 @@
                             </a>
                             <a href="{{ url_for('resume_en') }}" class="btn btn-hero-secondary">
                                 <i class="fas fa-file-alt"></i> My Resume
+                            </a>
+                            <a href="{{ url_for('static', filename='files/cv-diego-bernardes-en.pdf') }}" class="btn btn-hero-secondary" download>
+                                <i class="fas fa-download"></i> Download Resume
                             </a>
                         </div>
 

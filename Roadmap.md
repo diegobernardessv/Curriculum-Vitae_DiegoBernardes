@@ -93,8 +93,8 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 ---
 
 ### Fase 9: Performance & Otimização 🚧
-- [ ] Compressão de imagens
-- [ ] Minificação de CSS/JS
+- [x] Compressão de imagens
+- [x] Minificação de CSS/JS
 - [x] Atributos de performance em imagens (dimensions/decoding)
 - [ ] Lazy-loading para imagens fora da viewport
 
@@ -178,7 +178,7 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### v1.9.0 - 30/01/2026
 - Otimizacao de carregamento do avatar (dimensions/decoding)
- - Suporte a WebP via picture
+ - Suporte a WebP via picture (removido)
  - Script de minificação de CSS/JS adicionado
 
 ### v1.10.0 - 30/01/2026
@@ -211,6 +211,18 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### v1.18.0 - 30/01/2026
 - Versão em inglês adicionada (home, currículo, projetos e contato)
+
+### v1.19.0 - 30/01/2026
+- Revisão completa dos textos em inglês
+
+### v1.20.0 - 30/01/2026
+- Arquivos minificados gerados (CSS/JS)
+
+### v1.21.0 - 30/01/2026
+- Imagem de perfil otimizada (JPEG)
+
+### v1.22.0 - 30/01/2026
+- Currículo em inglês adicionado e linkado
 
 ---
 
