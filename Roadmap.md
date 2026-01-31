@@ -100,16 +100,16 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 10: Analytics & Monitoramento 🚧
-- [ ] Google Analytics (GA4)
-- [ ] Hotjar (ou similar)
+### Fase 10: Analytics & Monitoramento ✅
+- [x] Google Analytics (GA4)
+- [-] Hotjar (cancelado)
 - [x] Infra de tracking via variáveis de ambiente
 
 ---
 
-### Fase 11: Acessibilidade (WCAG)
+### Fase 11: Acessibilidade (WCAG) 🚧
 - [ ] Melhorias de contraste
-- [ ] Foco visível e navegação por teclado
+- [x] Foco visível e navegação por teclado
 - [ ] aria-labels completos
 
 ---
@@ -183,6 +183,13 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### v1.10.0 - 30/01/2026
 - Suporte a GA4 e Hotjar via variáveis de ambiente
+
+### v1.11.0 - 30/01/2026
+- Hotjar removido a pedido
+
+### v1.12.0 - 30/01/2026
+- Skip link para acessibilidade
+- Foco visivel em links, botoes e campos
 
 ---
 

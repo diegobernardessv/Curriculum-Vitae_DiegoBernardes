@@ -43,6 +43,25 @@ body {
     color: var(--color-text);
 }
 
+/* Acessibilidade: Skip link */
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -40px;
+    background: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(139, 0, 0, 0.8);
+    text-decoration: none;
+    z-index: 2000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
 /* ============================
    2. LAYOUT & ESTRUTURA
    ============================ */
@@ -107,6 +126,16 @@ main ul {
     color: var(--color-accent-light) !important;
     border-bottom: 2px solid var(--color-accent-light);
     padding-bottom: 2px;
+}
+
+/* Acessibilidade: foco visivel */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(255, 77, 77, 0.8);
+    outline-offset: 2px;
 }
 
 /* Theme toggle */
@@ -247,18 +276,9 @@ article time::before {
 .hero-image-ring {
     position: absolute;
     inset: 0;
-    border: 2px dashed var(--color-accent-light);
     border-radius: 50%;
-    animation: rotate-ring 20s linear infinite;
-}
-
-@keyframes rotate-ring {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
 }
 
 .hero-text {
@@ -1219,6 +1239,12 @@ body.theme-light .footer__item {
 
 body.theme-light .footer__item:hover {
     color: var(--color-accent);
+}
+
+body.theme-light .skip-link {
+    background: #ffffff;
+    color: #000000;
+    border-color: rgba(139, 0, 0, 0.5);
 }
 
 /* ============================
