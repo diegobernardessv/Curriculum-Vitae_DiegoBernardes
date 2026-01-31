@@ -313,13 +313,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa TypeWriter na página Home
     const typewriterElement = document.getElementById('typewriter');
     if (typewriterElement) {
-        const titles = [
-            'Software Engineer',
-            'Desenvolvedor FullStack',
-            'Analista de Sistemas',
-            'Especialista em Python',
-            'Entusiasta de Power BI'
-        ];
+        const titlesAttr = typewriterElement.getAttribute('data-titles');
+        const titles = titlesAttr
+            ? titlesAttr.split('|').map(title => title.trim()).filter(Boolean)
+            : [
+                'Engenheiro de Software',
+                'Especialista em Python',
+                'Indie Hacker | SaaS Builder',
+                'Desenvolvedor FullStack',
+                'Analista de Dados'
+            ];
         new TypeWriter(typewriterElement, titles, 100, 50, 2000);
     }
 

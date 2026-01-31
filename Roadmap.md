@@ -121,8 +121,8 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 13: Internacionalização
-- [ ] Versão EN do portfólio
+### Fase 13: Internacionalização ✅
+- [x] Versão EN do portfólio
 
 ---
 
@@ -205,6 +205,12 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### v1.16.0 - 30/01/2026
 - Ajustes finos de espaçamento entre seções
+
+### v1.17.0 - 30/01/2026
+- Conteúdo alinhado com LinkedIn (cargo, resumo, experiências e projetos)
+
+### v1.18.0 - 30/01/2026
+- Versão em inglês adicionada (home, currículo, projetos e contato)
 
 ---
 

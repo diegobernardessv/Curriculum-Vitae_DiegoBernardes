@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
-{% set lang_switch_url = '/en/resume' %}
-{% set lang_switch_label = 'EN' %}
+{% set html_lang = 'en' %}
+{% set skip_text = 'Skip to content' %}
+{% set nav_home = 'Home' %}
+{% set nav_resume = 'Resume' %}
+{% set nav_projects = 'Projects' %}
+{% set nav_contact = 'Contact' %}
+{% set nav_home_url = '/en' %}
+{% set nav_resume_url = '/en/resume' %}
+{% set nav_projects_url = '/en/projects' %}
+{% set nav_contact_url = '/en/contact' %}
+{% set lang_switch_url = '/resume.html' %}
+{% set lang_switch_label = 'PT' %}
 
-{% block title %}Currículo | Diego Bernardes Silva{% endblock %}
+{% block title %}Resume | Diego Bernardes Silva{% endblock %}
 
 {% block content %}
     <main class="container resume-page">
@@ -27,14 +37,14 @@
         </section>
 
         <section id="education" class="resume-section animate-on-scroll">
-            <h3>Formação</h3>
+            <h3>Education</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>Análise e Desenvolvimento de Sistemas</h4>
+                        <h4>Systems Analysis and Development</h4>
                         <p>Estacio, Vitória - Espírito Santo</p>
                         <time class="datetime" datetime="2021-11">Nov 2021 - Nov 2023</time>
                     </div>
@@ -43,7 +53,7 @@
         </section>
 
         <section id="experience" class="resume-section animate-on-scroll">
-            <h3>Experiência Profissional</h3>
+            <h3>Experience</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker">
@@ -51,19 +61,19 @@
                     </div>
                     <div class="timeline-content">
                         <h4>Independent Software Engineer / SaaS Builder</h4>
-                        <p>Freelancer · Vitória, Espírito Santo, Brasil · Remoto</p>
-                        <time class="datetime" datetime="2024-01">Jan 2024 - Presente</time>
+                        <p>Freelancer · Vitória, Espírito Santo, Brazil · Remote</p>
+                        <time class="datetime" datetime="2024-01">Jan 2024 - Present</time>
                         <ul class="timeline-list">
-                            <li><strong>Arquitetura e dados:</strong> arquitetura de sistemas e modelagem de dados.</li>
-                            <li><strong>Backend:</strong> desenvolvimento de APIs e lógica de negócio com Python.</li>
-                            <li><strong>Banco de dados:</strong> design e otimização com PostgreSQL.</li>
-                            <li><strong>Frontend:</strong> interfaces responsivas com JavaScript e Bootstrap.</li>
-                            <li><strong>Produto:</strong> desenho de fluxos e UX de ponta a ponta.</li>
-                            <li><strong>Entrega:</strong> CI/CD e coordenação de deploy.</li>
-                            <li><strong>Ownership:</strong> responsabilidade total pelo ciclo do produto.</li>
+                            <li><strong>Architecture & data:</strong> system architecture and data modeling.</li>
+                            <li><strong>Backend:</strong> APIs and business logic with Python.</li>
+                            <li><strong>Database:</strong> design and optimization with PostgreSQL.</li>
+                            <li><strong>Frontend:</strong> responsive interfaces with JavaScript and Bootstrap.</li>
+                            <li><strong>Product:</strong> end-to-end product and UX flows.</li>
+                            <li><strong>Delivery:</strong> CI/CD and deployment coordination.</li>
+                            <li><strong>Ownership:</strong> full product lifecycle responsibility.</li>
                         </ul>
-                        <p><strong>Projeto principal:</strong> Manifestly — plataforma SaaS para automação de workflows
-                            logísticos, assinaturas digitais e processos empresariais.</p>
+                        <p><strong>Main project:</strong> Manifestly — SaaS platform for logistics workflows, digital
+                            signatures, and enterprise process automation.</p>
                     </div>
                 </div>
 
@@ -73,13 +83,13 @@
                     </div>
                     <div class="timeline-content">
                         <h4>Supply Chain Operations Analyst & IT Systems Interface (Key User)</h4>
-                        <p>Grupo Simec · Full-time · Cariacica, Espírito Santo, Brasil · Presencial</p>
-                        <time class="datetime" datetime="2014-01">Jan 2014 - Presente</time>
+                        <p>Grupo Simec · Full-time · Cariacica, Espírito Santo, Brazil · On-site</p>
+                        <time class="datetime" datetime="2014-01">Jan 2014 - Present</time>
                         <ul class="timeline-list">
-                            <li><strong>Interface técnica:</strong> ponte entre operações e TI, traduzindo requisitos no TOTVS Protheus.</li>
-                            <li><strong>Data engineering & KPIs:</strong> automação de relatórios executivos em Excel.</li>
-                            <li><strong>Business intelligence:</strong> dashboards em Power BI para monitoramento em tempo real.</li>
-                            <li><strong>Treinamento corporativo:</strong> capacitação do ERP (Procurement, Inventory, Cost).</li>
+                            <li><strong>Technical interface:</strong> bridge between operations and IT (TOTVS Protheus).</li>
+                            <li><strong>Data engineering & KPIs:</strong> automated executive reporting in Excel.</li>
+                            <li><strong>Business intelligence:</strong> Power BI dashboards for real-time monitoring.</li>
+                            <li><strong>Corporate training:</strong> ERP training (Procurement, Inventory, Cost).</li>
                         </ul>
                     </div>
                 </div>
@@ -87,59 +97,59 @@
         </section>
 
         <section id="courses" class="resume-section animate-on-scroll">
-            <h3>Cursos</h3>
+            <h3>Courses</h3>
             <div class="course-list">
                 <div class="course-card">
-                    <h4>Microsoft Excel + Power BI - Formação Especialista</h4>
+                    <h4>Microsoft Excel + Power BI Specialist</h4>
                     <p class="course-provider">Udemy</p>
-                    <time class="datetime" datetime="2024-02">Fev 2024 - Mar 2024</time>
+                    <time class="datetime" datetime="2024-02">Feb 2024 - Mar 2024</time>
                 </div>
                 <div class="course-card">
                     <h4>FullStack Web Developer using Flask, Python, HTML, CSS and MongoDB</h4>
                     <p class="course-provider">Udemy</p>
-                    <time class="datetime" datetime="2024-05">Mai 2024 - Jul 2024</time>
+                    <time class="datetime" datetime="2024-05">May 2024 - Jul 2024</time>
                 </div>
                 <div class="course-card">
-                    <h4>Power BI Avançado</h4>
+                    <h4>Advanced Power BI</h4>
                     <p class="course-provider">Udemy</p>
-                    <time class="datetime" datetime="2025-01">Jan 2025 - Fev 2025</time>
+                    <time class="datetime" datetime="2025-01">Jan 2025 - Feb 2025</time>
                 </div>
                 <div class="course-card">
-                    <h4>TOTVS Protheus - Módulo Estoque / Custos</h4>
+                    <h4>TOTVS Protheus - Inventory / Cost Module</h4>
                     <p class="course-provider">Udemy</p>
-                    <time class="datetime" datetime="2025-05">Mai 2025 - Jul 2025</time>
+                    <time class="datetime" datetime="2025-05">May 2025 - Jul 2025</time>
                 </div>
                 <div class="course-card">
                     <h4>SAP Fiori FullStack Trainee</h4>
                     <p class="course-provider">Megawork Consulting</p>
-                    <time class="datetime" datetime="2025-11">Nov 2025 - Dez 2025</time>
+                    <time class="datetime" datetime="2025-11">Nov 2025 - Dec 2025</time>
                 </div>
             </div>
         </section>
 
         <section id="languages" class="resume-section animate-on-scroll">
-            <h3>Idiomas</h3>
+            <h3>Languages</h3>
             <div class="language-list">
                 <div class="language-item">
                     <i class="fas fa-language" aria-hidden="true"></i>
-                    <span>Inglês - Intermediário</span>
+                    <span>English - Intermediate</span>
                 </div>
                 <div class="language-item">
                     <i class="fas fa-language" aria-hidden="true"></i>
-                    <span>Espanhol - Básico</span>
+                    <span>Spanish - Basic</span>
                 </div>
                 <div class="language-item">
                     <i class="fas fa-language" aria-hidden="true"></i>
-                    <span>Português - Nativo</span>
+                    <span>Portuguese - Native</span>
                 </div>
             </div>
         </section>
 
         <section id="resume-download" class="resume-section resume-download animate-on-scroll">
-            <h3>Download do Currículo</h3>
-            <p>Baixe meu currículo em PDF para consulta offline.</p>
+            <h3>Resume Download</h3>
+            <p>Download my resume in PDF for offline reading.</p>
             <a class="btn btn-resume-download" href="{{ url_for('static', filename='files/cv-diego-bernardes.pdf') }}" download>
-                <i class="fas fa-download" aria-hidden="true"></i> Baixar Currículo (PDF)
+                <i class="fas fa-download" aria-hidden="true"></i> Download Resume (PDF)
             </a>
         </section>
     </main>

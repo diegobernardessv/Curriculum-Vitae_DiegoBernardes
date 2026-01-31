@@ -48,6 +48,27 @@ def contact():
     """Renderiza a página de contato."""
     return render_template('contact.html')
 
+# Rotas em inglês
+@app.route('/en')
+def home_en():
+    """Renderiza a página inicial em inglês."""
+    return render_template('home_en.html')
+
+@app.route('/en/resume')
+def resume_en():
+    """Renderiza a página de currículo em inglês."""
+    return render_template('resume_en.html')
+
+@app.route('/en/projects')
+def projects_en():
+    """Renderiza a página de projetos em inglês."""
+    return render_template('projects_en.html')
+
+@app.route('/en/contact')
+def contact_en():
+    """Renderiza a página de contato em inglês."""
+    return render_template('contact_en.html')
+
 # Rotas auxiliares para SEO
 @app.route('/sitemap.xml')
 def sitemap():

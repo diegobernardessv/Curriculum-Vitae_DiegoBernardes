@@ -119,6 +119,14 @@ main ul {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.navbar .nav-link.nav-lang {
+    border: 1px solid rgba(139, 0, 0, 0.6);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
 .navbar .nav-link:hover {
     color: var(--color-accent-light);
     transform: scale(1.05);
@@ -303,6 +311,11 @@ article time::before {
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.5px;
+}
+
+body.theme-light .hero-name {
+    color: #000000;
+    text-shadow: none;
 }
 
 .hero-title {

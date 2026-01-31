@@ -1,39 +1,42 @@
 {% extends "base.html" %}
 
-{% set lang_switch_url = '/en' %}
-{% set lang_switch_label = 'EN' %}
+{% set html_lang = 'en' %}
+{% set skip_text = 'Skip to content' %}
+{% set nav_home = 'Home' %}
+{% set nav_resume = 'Resume' %}
+{% set nav_projects = 'Projects' %}
+{% set nav_contact = 'Contact' %}
+{% set nav_home_url = '/en' %}
+{% set nav_resume_url = '/en/resume' %}
+{% set nav_projects_url = '/en/projects' %}
+{% set nav_contact_url = '/en/contact' %}
+{% set lang_switch_url = '/' %}
+{% set lang_switch_label = 'PT' %}
 
-{% block title %}Início | Diego Bernardes Silva{% endblock %}
+{% block title %}Home | Diego Bernardes Silva{% endblock %}
 
 {% block main_class %}{% endblock %}
 
 {% block meta_tags %}
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Currículo de Diego Bernardes Silva - Analista de Sistemas e Desenvolvedor FullStack. Especialista em Python, JavaScript e Power BI.">
-    <meta name="keywords"
-        content="Diego Bernardes, Desenvolvedor FullStack, Python, JavaScript, Power BI, Currículo, Analista de Sistemas, Microsoft Excel">
+    <meta name="description" content="Software Engineer and Indie Hacker focused on building real products, SaaS workflows, and logistics automation.">
+    <meta name="keywords" content="Diego Bernardes, Software Engineer, Indie Hacker, SaaS, Logistics Automation, Python, FastAPI, Flask, JavaScript">
     <meta name="author" content="Diego Bernardes Silva">
-    <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dbsolutions.dev.br/">
-    <meta property="og:title" content="Diego Bernardes Silva | Desenvolvedor FullStack">
-    <meta property="og:description"
-        content="Analista de Sistemas e Desenvolvedor FullStack. Confira meus projetos e experiências.">
+    <meta property="og:title" content="Diego Bernardes Silva | Software Engineer">
+    <meta property="og:description" content="Independent software engineer building SaaS products for logistics automation.">
     <meta property="og:image" content="{{ url_for('static', filename='img/fotoperfil.jpg') }}">
 {% endblock %}
 
 {% block content %}
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center justify-content-center min-vh-100">
                 <div class="col-lg-10">
                     <div class="hero-content text-center">
-                        <!-- Foto de Perfil -->
                         <div class="hero-image-wrapper animate-fade-in">
                             <img src="{{ url_for('static', filename='img/fotoperfil.jpg') }}"
-                                 alt="Foto de Diego Bernardes Silva"
+                                 alt="Photo of Diego Bernardes Silva"
                                  width="180"
                                  height="180"
                                  loading="eager"
@@ -43,84 +46,77 @@
                             <div class="hero-image-ring"></div>
                         </div>
 
-                        <!-- Apresentação -->
                         <div class="hero-text animate-slide-up">
-                            <p class="hero-greeting">Olá, eu sou</p>
+                            <p class="hero-greeting">Hi' i'm</p>
                             <h1 class="hero-name">Diego Bernardes Silva</h1>
                             <h2 class="hero-title">
-                                <span class="typewriter" id="typewriter" data-titles="Engenheiro de Software | Especialista em Python | Indie Hacker | SaaS Builder | Desenvolvedor FullStack | Analista de Dados"></span>
+                                <span class="typewriter" id="typewriter" data-titles="Software Engineer | Indie Hacker | Logistics Automation | Python (FastAPI/Flask) | SaaS Builder"></span>
                                 <span class="typewriter-cursor">|</span>
                             </h2>
                             <p class="hero-description">
-                                Engenheiro de software focado em construir produtos reais, unindo backend, dados e UX.
-                                Especializado em automação logística, Python (FastAPI/Flask) e JavaScript.
+                                Software engineer focused on building real products, bridging backend, data, and UX.
+                                Specialized in logistics automation, Python (FastAPI/Flask), and JavaScript.
                             </p>
                         </div>
 
-                        <!-- Botões de Ação -->
                         <div class="hero-actions animate-slide-up-delay">
-                            <a href="{{ url_for('projects') }}" class="btn btn-hero-primary">
-                                <i class="fas fa-rocket"></i> Ver Projetos
+                            <a href="{{ url_for('projects_en') }}" class="btn btn-hero-primary">
+                                <i class="fas fa-rocket"></i> View Projects
                             </a>
-                            <a href="{{ url_for('resume') }}" class="btn btn-hero-secondary">
-                                <i class="fas fa-file-alt"></i> Meu Currículo
+                            <a href="{{ url_for('resume_en') }}" class="btn btn-hero-secondary">
+                                <i class="fas fa-file-alt"></i> My Resume
                             </a>
                         </div>
 
-                        <!-- Redes Sociais -->
                         <div class="hero-social animate-fade-in-delay">
-                            <a href="https://www.linkedin.com/in/diegobernardessv" target="_blank" 
+                            <a href="https://www.linkedin.com/in/diegobernardessv" target="_blank"
                                class="social-link" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             </a>
-                            <a href="https://github.com/diegobernardessv" target="_blank" 
+                            <a href="https://github.com/diegobernardessv" target="_blank"
                                class="social-link" aria-label="GitHub">
                                 <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://gitlab.com/diegobernardessv" target="_blank" 
+                            <a href="https://gitlab.com/diegobernardessv" target="_blank"
                                class="social-link" aria-label="GitLab">
                                 <i class="fab fa-gitlab" aria-hidden="true"></i>
                             </a>
-                            <a href="mailto:diegobernardessv@gmail.com" 
+                            <a href="mailto:diegobernardessv@gmail.com"
                                class="social-link" aria-label="Email">
                                 <i class="fas fa-envelope" aria-hidden="true"></i>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section id="about" class="about-section animate-on-scroll">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-header text-center">
-                        <h2 class="section-title">Sobre Mim</h2>
+                        <h2 class="section-title">About</h2>
                         <div class="section-divider"></div>
                     </div>
                     <div class="about-content">
                         <p>
-                            Engenheiro de software focado em construir produtos reais, não apenas features.
-                            Trabalho como desenvolvedor independente, desenhando e entregando sistemas de ponta a
-                            ponta — da arquitetura e banco de dados às APIs e UX.
+                            I'm a software engineer focused on building real products, not just features.
+                            I work as an independent developer, designing and building production-grade systems end-to-end.
                         </p>
                         <p>
-                            Tenho mais de 12 anos de experiência em logística e supply chain, conectando a realidade
-                            operacional com a execução técnica. Meu foco é SaaS, workflows corporativos, automação
-                            logística e digitalização de processos.
+                            With 12+ years in logistics and supply chain, I bridge operational reality and technical execution.
+                            My work centers on SaaS products, enterprise workflows, logistics automation, and process digitization.
                         </p>
                         <div class="about-highlights">
                             <div class="highlight-item badge rounded-pill text-bg-dark border border-danger px-3 py-2">
                                 <i class="fas fa-code" aria-hidden="true"></i>
-                                <span>Engenheiro de Software</span>
+                                <span>Software Engineer</span>
                             </div>
                             <div class="highlight-item badge rounded-pill text-bg-dark border border-danger px-3 py-2">
                                 <i class="fas fa-chart-line" aria-hidden="true"></i>
-                                <span>Analista de Dados</span>
+                                <span>Data & Systems Analyst</span>
                             </div>
                             <div class="highlight-item badge rounded-pill text-bg-dark border border-danger px-3 py-2">
                                 <i class="fas fa-rocket" aria-hidden="true"></i>
@@ -133,11 +129,10 @@
         </div>
     </section>
 
-    <!-- Seção de Tecnologias -->
     <section class="tech-section animate-on-scroll">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Tecnologias</h2>
+                <h2 class="section-title">Tech Stack</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="tech-grid">
@@ -177,4 +172,3 @@
         </div>
     </section>
 {% endblock %}
-

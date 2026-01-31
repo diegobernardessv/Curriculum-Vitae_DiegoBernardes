@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 
-{% set lang_switch_url = '/en/projects' %}
-{% set lang_switch_label = 'EN' %}
+{% set html_lang = 'en' %}
+{% set skip_text = 'Skip to content' %}
+{% set nav_home = 'Home' %}
+{% set nav_resume = 'Resume' %}
+{% set nav_projects = 'Projects' %}
+{% set nav_contact = 'Contact' %}
+{% set nav_home_url = '/en' %}
+{% set nav_resume_url = '/en/resume' %}
+{% set nav_projects_url = '/en/projects' %}
+{% set nav_contact_url = '/en/contact' %}
+{% set lang_switch_url = '/projects.html' %}
+{% set lang_switch_label = 'PT' %}
 
-{% block title %}Projetos | Diego Bernardes Silva{% endblock %}
+{% block title %}Projects | Diego Bernardes Silva{% endblock %}
 
 {% block content %}
     <main class="container projects-page">
         <section id="projects" class="projects-section animate-on-scroll">
-            <h3>Meus Projetos</h3>
+            <h3>My Projects</h3>
             <p class="projects-intro">
-                Alguns projetos que mostram minha experiência em soluções web completas, automação de processos e
-                aplicações empresariais escaláveis.
+                A selection of projects that showcase my experience in full-stack systems, workflow automation, and
+                enterprise-grade SaaS products.
             </p>
 
             <div class="projects-grid">
@@ -20,15 +30,15 @@
                         <div class="project-icon">
                             <i class="fas fa-warehouse" aria-hidden="true"></i>
                         </div>
-                        <span class="project-status">Em andamento</span>
+                        <span class="project-status">In progress</span>
                     </div>
                     <div class="project-body">
                         <h4>Manifestly</h4>
                         <p class="project-subtitle">Workflow & Document Automation Platform</p>
-                        <time class="datetime" datetime="2024-08">Ago 2024 - Presente</time>
+                        <time class="datetime" datetime="2024-08">Aug 2024 - Present</time>
                         <p>
-                            Plataforma SaaS para digitalizar workflows logísticos, substituindo processos em papel
-                            por aprovações digitais, assinaturas eletrônicas e trilhas de auditoria.
+                            SaaS platform to digitize logistics workflows, replacing paper-based processes with
+                            approvals, digital signatures, and audit trails.
                         </p>
                         <div class="project-tags">
                             <span>Python</span>
@@ -40,10 +50,10 @@
                         </div>
                         <div class="project-links">
                             <a class="project-link" href="https://romaneiosapp.dbsolutions.dev.br/" target="_blank" rel="noopener">
-                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Acessar Projeto
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Project
                             </a>
                             <a class="project-link project-link--repo" href="https://github.com/diegobernardessv/romaneiosapp" target="_blank" rel="noopener">
-                                <i class="fab fa-github" aria-hidden="true"></i> Repositório
+                                <i class="fab fa-github" aria-hidden="true"></i> Repository
                             </a>
                         </div>
                     </div>
@@ -54,15 +64,15 @@
                         <div class="project-icon">
                             <i class="fas fa-clipboard-check" aria-hidden="true"></i>
                         </div>
-                        <span class="project-status">Em andamento</span>
+                        <span class="project-status">In progress</span>
                     </div>
                     <div class="project-body">
                         <h4>NonConformity</h4>
-                        <p class="project-subtitle">Gestão de Não Conformidades</p>
-                        <time class="datetime" datetime="2025-02">Fev 2025 - Presente</time>
+                        <p class="project-subtitle">Non-Conformity Management</p>
+                        <time class="datetime" datetime="2025-02">Feb 2025 - Present</time>
                         <p>
-                            Sistema web para gestão de NCRs, substituindo processos manuais por fluxos rastreáveis
-                            entre times de armazém e suprimentos.
+                            Web system to manage NCRs, replacing manual processes with traceable workflows between
+                            warehouse and procurement teams.
                         </p>
                         <div class="project-tags">
                             <span>Python</span>
@@ -74,10 +84,10 @@
                         </div>
                         <div class="project-links">
                             <a class="project-link" href="https://nonconformity.dbsolutions.dev.br/" target="_blank" rel="noopener">
-                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Acessar Projeto
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Project
                             </a>
                             <a class="project-link project-link--repo" href="https://github.com/diegobernardessv/nonconformity" target="_blank" rel="noopener">
-                                <i class="fab fa-github" aria-hidden="true"></i> Repositório
+                                <i class="fab fa-github" aria-hidden="true"></i> Repository
                             </a>
                         </div>
                     </div>
@@ -88,15 +98,15 @@
                         <div class="project-icon">
                             <i class="fas fa-user-astronaut" aria-hidden="true"></i>
                         </div>
-                        <span class="project-status project-status--done">Concluído</span>
+                        <span class="project-status project-status--done">Completed</span>
                     </div>
                     <div class="project-body">
                         <h4>Personal Portfolio</h4>
-                        <p class="project-subtitle">Web application para projetos, skills e contato</p>
-                        <time class="datetime" datetime="2025-04">Abr 2025 - Jun 2025</time>
+                        <p class="project-subtitle">Dynamic web portfolio</p>
+                        <time class="datetime" datetime="2025-04">Apr 2025 - Jun 2025</time>
                         <p>
-                            Aplicação web dinâmica para apresentar projetos, habilidades e informações de contato
-                            de forma moderna e interativa.
+                            Dynamic portfolio web application to showcase projects, skills, and contact information
+                            in a modern and interactive way.
                         </p>
                         <div class="project-tags">
                             <span>Flask</span>
@@ -108,10 +118,10 @@
                         </div>
                         <div class="project-links">
                             <a class="project-link" href="https://www.dbsolutions.dev.br/" target="_blank" rel="noopener">
-                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Acessar Projeto
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Project
                             </a>
                             <a class="project-link project-link--repo" href="https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes" target="_blank" rel="noopener">
-                                <i class="fab fa-github" aria-hidden="true"></i> Repositório
+                                <i class="fab fa-github" aria-hidden="true"></i> Repository
                             </a>
                         </div>
                     </div>
