@@ -116,6 +116,7 @@ main ul {
     box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
 }
 
+
 .navbar .navbar-brand {
     color: #ffffff;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -1342,6 +1343,12 @@ body.theme-light .skip-link {
 
 .footer__version {
     margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #aaaaaa;
+}
+
+.footer__tagline {
+    margin-top: 0.25rem;
     font-size: 0.75rem;
     color: #aaaaaa;
 }

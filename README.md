@@ -1,6 +1,8 @@
-# Curriculum Vitae - Diego Bernardes
+# DBSolutions Lab' - Portfolio Diego Bernardes
 
-Bem-vindo ao repositório do meu Portfólio Interativo. Este projeto é uma aplicação web dinâmica para apresentar meu perfil profissional, destacando minha experiência como Analista de Sistemas e Desenvolvedor FullStack.
+**DBSolutions Lab' – Building SaaS & Software Engineering**
+
+Bem-vindo ao repositório do meu Portfólio Interativo. Este projeto é uma aplicação web dinâmica para apresentar meu perfil profissional, destacando minha experiência em Software Engineering e construção de soluções SaaS.
 
 ## 📋 Sobre o Projeto
 
@@ -85,6 +87,21 @@ Este projeto está pronto para ser implantado na nuvem usando a plataforma Rende
 5.  Aguarde a verificação e a propagação do DNS. O Render cuidará automaticamente do certificado SSL.
 
 **Project URL: https://github.com/diegobernardessv/Curriculum-Vitae_DiegoBernardes**
+
+## ⚡ Deploy na Vercel
+
+1.  **Crie um projeto no Vercel** e conecte seu repositório.
+2.  **Framework Preset:** selecione **Other**.
+3.  **Deploy:** o Vercel vai detectar o `vercel.json` automaticamente.
+
+### Domínio com Cloudflare (www principal)
+
+Crie os seguintes registros DNS:
+
+- **A** `@` → `216.198.79.1` (DNS only)
+- **CNAME** `www` → `cname.vercel-dns.com` (DNS only)
+
+No Vercel, adicione `dbsolutions.dev.br` e `www.dbsolutions.dev.br`, e defina **www** como principal.
 
 ## 🛠️ Tecnologias Utilizadas
 

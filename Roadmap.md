@@ -174,7 +174,7 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 - Sitemap.xml e robots.txt adicionados
 
 ### v1.8.0 - 30/01/2026
-- Favicon DBSolutions aplicado no projeto
+- Favicon DBSolutions Lab' aplicado no projeto
 
 ### v1.9.0 - 30/01/2026
 - Otimizacao de carregamento do avatar (dimensions/decoding)

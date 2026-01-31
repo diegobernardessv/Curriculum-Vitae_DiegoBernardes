@@ -7,11 +7,11 @@
     <title>{% block title %}Portfolio Interativo Diego Bernardes Silva{% endblock %}</title>
 
     {% block meta_tags %}
-        <meta name="description" content="Portfólio de Diego Bernardes Silva, Desenvolvedor FullStack focado em soluções web com Python, Flask e JavaScript.">
+        <meta name="description" content="DBSolutions Lab' – Building SaaS &amp; Software Engineering. Portfólio de Diego Bernardes Silva com soluções web em Python, Flask e JavaScript.">
         <meta name="keywords" content="Diego Bernardes, Portfólio, Desenvolvedor FullStack, Python, Flask, JavaScript, Bootstrap, Power BI">
         <meta name="author" content="Diego Bernardes Silva">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="DBSolutions">
+        <meta property="og:site_name" content="DBSolutions Lab'">
         <meta property="og:title" content="Portfólio | Diego Bernardes Silva">
         <meta property="og:description" content="Projetos, experiências e soluções desenvolvidas por Diego Bernardes Silva.">
         <meta property="og:url" content="{{ request.url }}">
@@ -60,7 +60,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ nav_home_url|default(url_for('home')) }}">
-                <i class="fa-solid fa-signature"></i> DBSolutions'
+                <i class="fa-solid fa-signature"></i> DBSolutions Lab'
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,9 +119,10 @@
                 <div class="footer__info">
                     <p class="footer__text">
                         <a href="https://www.linkedin.com/in/diegobernardessv" class="footer__item">
-                            &copy; 2026 DB Solutions' - {{ footer_rights|default('Todos os direitos reservados.') }}
+                            &copy; 2026 DBSolutions Lab' - {{ footer_rights|default('Todos os direitos reservados.') }}
                         </a>
                     </p>
+                    <p class="footer__tagline">DBSolutions Lab' – Building SaaS &amp; Software Engineering</p>
                     <p class="footer__version">Version 1.0.0</p>
                 </div>
             </section>
