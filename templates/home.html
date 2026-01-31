@@ -29,9 +29,17 @@
                     <div class="hero-content text-center">
                         <!-- Foto de Perfil -->
                         <div class="hero-image-wrapper animate-fade-in">
-                            <img src="{{ url_for('static', filename='img/fotoperfil.jpg') }}" 
-                                 alt="Foto de Diego Bernardes Silva" 
-                                 class="hero-profile-img">
+                            <picture>
+                                <source srcset="{{ url_for('static', filename='img/fotoperfil.webp') }}" type="image/webp">
+                                <img src="{{ url_for('static', filename='img/fotoperfil.jpg') }}"
+                                     alt="Foto de Diego Bernardes Silva"
+                                     width="180"
+                                     height="180"
+                                     loading="eager"
+                                     decoding="async"
+                                     fetchpriority="high"
+                                     class="hero-profile-img">
+                            </picture>
                             <div class="hero-image-ring"></div>
                         </div>
 

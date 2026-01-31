@@ -7,6 +7,10 @@ app = Flask(__name__)
 # Configurações para desenvolvimento
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+app.config['USE_MINIFIED_ASSETS'] = os.environ.get('USE_MINIFIED_ASSETS', '0') == '1'
+app.config['GA_MEASUREMENT_ID'] = os.environ.get('GA_MEASUREMENT_ID')
+app.config['HOTJAR_SITE_ID'] = os.environ.get('HOTJAR_SITE_ID')
+app.config['HOTJAR_VERSION'] = os.environ.get('HOTJAR_VERSION', '6')
 
 # Configuração do WhiteNoise para Produção (Render)
 # Verificamos se estamos no Render ou em ambiente de produção

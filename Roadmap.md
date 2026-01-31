@@ -92,6 +92,40 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
+### Fase 9: Performance & Otimização 🚧
+- [ ] Compressão de imagens
+- [ ] Minificação de CSS/JS
+- [x] Atributos de performance em imagens (dimensions/decoding)
+- [ ] Lazy-loading para imagens fora da viewport
+
+---
+
+### Fase 10: Analytics & Monitoramento 🚧
+- [ ] Google Analytics (GA4)
+- [ ] Hotjar (ou similar)
+- [x] Infra de tracking via variáveis de ambiente
+
+---
+
+### Fase 11: Acessibilidade (WCAG)
+- [ ] Melhorias de contraste
+- [ ] Foco visível e navegação por teclado
+- [ ] aria-labels completos
+
+---
+
+### Fase 12: Refino de UI
+- [ ] Microinterações
+- [ ] Ajustes de tipografia
+- [ ] Espaçamentos finos
+
+---
+
+### Fase 13: Internacionalização
+- [ ] Versão EN do portfólio
+
+---
+
 ## 📝 Changelog
 
 ### v1.0.0 - Versão Inicial
@@ -141,6 +175,14 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ### v1.8.0 - 30/01/2026
 - Favicon DBSolutions aplicado no projeto
+
+### v1.9.0 - 30/01/2026
+- Otimizacao de carregamento do avatar (dimensions/decoding)
+ - Suporte a WebP via picture
+ - Script de minificação de CSS/JS adicionado
+
+### v1.10.0 - 30/01/2026
+- Suporte a GA4 e Hotjar via variáveis de ambiente
 
 ---
 
