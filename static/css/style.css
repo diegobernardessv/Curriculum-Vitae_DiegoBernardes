@@ -383,6 +383,10 @@ article time::before {
     color: var(--color-accent-light);
 }
 
+body.theme-light .btn-hero-secondary {
+    color: var(--color-accent);
+}
+
 .hero-social {
     display: flex;
     gap: 1rem;

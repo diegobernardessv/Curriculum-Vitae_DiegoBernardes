@@ -107,10 +107,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 
 ---
 
-### Fase 11: Acessibilidade (WCAG) 🚧
+### Fase 11: Acessibilidade (WCAG) ✅
 - [x] Melhorias de contraste
 - [x] Foco visível e navegação por teclado
-- [ ] aria-labels completos
+- [x] aria-labels completos
 
 ---
 
@@ -194,6 +194,10 @@ Este documento serve como guia para o desenvolvimento do portfólio pessoal.
 ### v1.13.0 - 30/01/2026
 - Contraste melhorado para textos secundarios
 - Botao de tema com aria-pressed
+
+### v1.14.0 - 30/01/2026
+- Icones marcados como decorativos (aria-hidden)
+- Fase 11 (WCAG) concluida
 
 ---
 
