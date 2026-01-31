@@ -267,6 +267,7 @@ function initThemeToggle() {
         if (!icon) return;
         const isLight = body.classList.contains('theme-light');
         icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+        button.setAttribute('aria-pressed', isLight ? 'true' : 'false');
     };
 
     updateIcon();
