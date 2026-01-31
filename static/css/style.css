@@ -276,13 +276,9 @@ article time::before {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: none;
 }
 
-.hero-profile-img:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
-}
 
 .hero-image-ring {
     position: absolute;
@@ -290,6 +286,25 @@ article time::before {
     border-radius: 50%;
     border: 2px solid #8b0000;
     box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(139, 0, 0, 0.45);
+    box-shadow: 0 0 12px rgba(139, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+.hero-image-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.18) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .hero-text {
