@@ -1283,6 +1283,22 @@ body.theme-light .footer__item:hover {
     color: var(--color-accent);
 }
 
+body.theme-light .footer__byline {
+    color: #444444;
+}
+
+body.theme-light .footer__byline-link {
+    color: var(--color-accent);
+}
+
+body.theme-light .footer__built {
+    color: #666666;
+}
+
+body.theme-light .footer__tagline {
+    color: #555555;
+}
+
 body.theme-light .skip-link {
     background: #ffffff;
     color: #000000;
@@ -1350,6 +1366,22 @@ body.theme-light .skip-link {
 .footer__tagline {
     margin-top: 0.25rem;
     font-size: 0.75rem;
+    color: #c7c7c7;
+}
+
+.footer__byline {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.footer__byline-link {
+    text-decoration: none;
+    color: #ff003c;
+}
+
+.footer__built {
+    margin-top: 10px;
     color: #aaaaaa;
 }
 
