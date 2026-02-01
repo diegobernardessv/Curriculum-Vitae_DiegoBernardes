@@ -53,7 +53,7 @@ body {
 .skip-link {
     position: absolute;
     left: 16px;
-    top: -40px;
+    top: -80px;
     background: #000000;
     color: #ffffff;
     padding: 0.5rem 1rem;
@@ -61,11 +61,13 @@ body {
     border: 1px solid rgba(139, 0, 0, 0.8);
     text-decoration: none;
     z-index: 2000;
-    transition: top 0.2s ease;
+    opacity: 0;
+    transition: top 0.2s ease, opacity 0.2s ease;
 }
 
 .skip-link:focus {
     top: 16px;
+    opacity: 1;
 }
 
 /* Acessibilidade: foco visivel */
@@ -1358,20 +1360,21 @@ body.theme-light .skip-link {
 }
 
 .footer__version {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     font-size: 0.75rem;
     color: #aaaaaa;
 }
 
 .footer__tagline {
-    margin-top: 0.25rem;
+    margin-top: 0.3rem;
     font-size: 0.75rem;
     color: #c7c7c7;
+    line-height: 1.4;
 }
 
 .footer__byline {
-    margin-top: 0.35rem;
-    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
     color: #666666;
 }
 
@@ -1381,7 +1384,7 @@ body.theme-light .skip-link {
 }
 
 .footer__built {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     color: #aaaaaa;
 }
 

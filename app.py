@@ -10,16 +10,6 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['USE_MINIFIED_ASSETS'] = os.environ.get('USE_MINIFIED_ASSETS', '0') == '1'
 app.config['GA_MEASUREMENT_ID'] = os.environ.get('GA_MEASUREMENT_ID')
 
-# Configuração do WhiteNoise para Produção (Render)
-# Verificamos se estamos no Render ou em ambiente de produção
-if os.environ.get('RENDER') or os.environ.get('FLASK_ENV') == 'production':
-    from whitenoise import WhiteNoise
-    # Usar o caminho absoluto garante que o WhiteNoise encontre a pasta static no servidor
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    static_dir = os.path.join(base_dir, 'static')
-    # Configura o WhiteNoise para servir a pasta /static
-    app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
-
 # Diretório absoluto para arquivos estáticos utilitários
 STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 
